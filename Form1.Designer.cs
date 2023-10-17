@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             button5 = new Button();
-            button2 = new Button();
-            button1 = new Button();
             addBtn = new Button();
             hemBtn = new Button();
             pictureBox1 = new PictureBox();
@@ -48,8 +46,6 @@
             // 
             panel1.BackColor = Color.CornflowerBlue;
             panel1.Controls.Add(button5);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(addBtn);
             panel1.Controls.Add(hemBtn);
             panel1.Controls.Add(pictureBox1);
@@ -70,36 +66,12 @@
             button5.Text = "Statistik";
             button5.UseVisualStyleBackColor = false;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.WhiteSmoke;
-            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.DarkGreen;
-            button2.Location = new Point(16, 601);
-            button2.Name = "button2";
-            button2.Size = new Size(239, 47);
-            button2.TabIndex = 4;
-            button2.Text = "Ta bort föremål";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.WhiteSmoke;
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.DarkGreen;
-            button1.Location = new Point(16, 487);
-            button1.Name = "button1";
-            button1.Size = new Size(239, 47);
-            button1.TabIndex = 3;
-            button1.Text = "Redigera föremål";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // addBtn
             // 
             addBtn.BackColor = Color.WhiteSmoke;
             addBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             addBtn.ForeColor = Color.DarkGreen;
-            addBtn.Location = new Point(16, 375);
+            addBtn.Location = new Point(16, 473);
             addBtn.Name = "addBtn";
             addBtn.Size = new Size(239, 47);
             addBtn.TabIndex = 2;
@@ -192,8 +164,6 @@
         private PictureBox pictureBox1;
         private Button addBtn;
         private Button button5;
-        private Button button2;
-        private Button button1;
         private TextBox textBox1;
         private Label label1;
         private ListBox listBox1;
