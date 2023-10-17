@@ -35,23 +35,26 @@
             // 
             // itemImage
             // 
+            itemImage.BorderStyle = BorderStyle.Fixed3D;
             itemImage.Location = new Point(14, 15);
             itemImage.Name = "itemImage";
-            itemImage.Size = new Size(214, 210);
+            itemImage.Size = new Size(239, 247);
             itemImage.SizeMode = PictureBoxSizeMode.StretchImage;
             itemImage.TabIndex = 0;
             itemImage.TabStop = false;
+            itemImage.Click += itemImage_Click;
             // 
             // itemName
             // 
             itemName.AutoSize = true;
-            itemName.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            itemName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             itemName.ForeColor = Color.DarkGreen;
-            itemName.Location = new Point(14, 212);
+            itemName.Location = new Point(14, 265);
             itemName.Name = "itemName";
-            itemName.Size = new Size(96, 38);
+            itemName.Size = new Size(79, 31);
             itemName.TabIndex = 1;
             itemName.Text = "label1";
+            itemName.Click += itemName_Click;
             // 
             // ItemUserControl
             // 
@@ -61,7 +64,7 @@
             Controls.Add(itemName);
             Controls.Add(itemImage);
             Name = "ItemUserControl";
-            Size = new Size(241, 277);
+            Size = new Size(269, 313);
             ((System.ComponentModel.ISupportInitialize)itemImage).EndInit();
             ResumeLayout(false);
             PerformLayout();

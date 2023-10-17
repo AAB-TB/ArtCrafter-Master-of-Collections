@@ -30,38 +30,38 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel1 = new Panel();
+            quitBtn = new Button();
             updateBtn = new Button();
             addBtn = new Button();
             hemBtn = new Button();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            comboBox1 = new ComboBox();
-            textBox5 = new TextBox();
+            txtItemName = new TextBox();
+            purchasePriceTextBox = new TextBox();
+            salePriceTextBox = new TextBox();
+            categoryComboBox = new ComboBox();
+            nycategorytxtbox = new TextBox();
             itemName = new Label();
-            button1 = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            nycategoriSave = new Button();
+            purchaseDateDateTimePicker = new DateTimePicker();
             label1 = new Label();
-            openFileDialog1 = new OpenFileDialog();
-            textBox2 = new TextBox();
+            descriptionTextBox = new TextBox();
+            saleLocationTextBox = new TextBox();
+            purchaseLocationTextBox = new TextBox();
+            label2 = new Label();
+            saleDateDateTimePicker = new DateTimePicker();
+            saleDateCheckBox = new CheckBox();
+            frontImagePictureBox = new PictureBox();
+            backImagePictureBox = new PictureBox();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            pictureBox2 = new PictureBox();
             tabPage2 = new TabPage();
-            pictureBox3 = new PictureBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            label2 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            quitBtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)frontImagePictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)backImagePictureBox).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -76,6 +76,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(270, 921);
             panel1.TabIndex = 1;
+            // 
+            // quitBtn
+            // 
+            quitBtn.BackColor = Color.WhiteSmoke;
+            quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            quitBtn.ForeColor = Color.DarkGreen;
+            quitBtn.Location = new Point(16, 775);
+            quitBtn.Name = "quitBtn";
+            quitBtn.Size = new Size(239, 47);
+            quitBtn.TabIndex = 4;
+            quitBtn.Text = "Stäng";
+            quitBtn.UseVisualStyleBackColor = false;
+            quitBtn.Click += quitBtn_Click;
             // 
             // updateBtn
             // 
@@ -100,6 +113,7 @@
             addBtn.TabIndex = 2;
             addBtn.Text = "Spara";
             addBtn.UseVisualStyleBackColor = false;
+            addBtn.Click += addBtn_Click;
             // 
             // hemBtn
             // 
@@ -124,56 +138,56 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtItemName
             // 
-            textBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.DarkGreen;
-            textBox1.Location = new Point(401, 398);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Föremål Namn";
-            textBox1.Size = new Size(549, 38);
-            textBox1.TabIndex = 3;
+            txtItemName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            txtItemName.ForeColor = Color.DarkGreen;
+            txtItemName.Location = new Point(401, 398);
+            txtItemName.Name = "txtItemName";
+            txtItemName.PlaceholderText = "Föremål Namn";
+            txtItemName.Size = new Size(549, 38);
+            txtItemName.TabIndex = 3;
             // 
-            // textBox3
+            // purchasePriceTextBox
             // 
-            textBox3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.ForeColor = Color.DarkGreen;
-            textBox3.Location = new Point(404, 579);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Inköpspris";
-            textBox3.Size = new Size(549, 38);
-            textBox3.TabIndex = 5;
+            purchasePriceTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            purchasePriceTextBox.ForeColor = Color.DarkGreen;
+            purchasePriceTextBox.Location = new Point(404, 579);
+            purchasePriceTextBox.Name = "purchasePriceTextBox";
+            purchasePriceTextBox.PlaceholderText = "Inköpspris";
+            purchasePriceTextBox.Size = new Size(549, 38);
+            purchasePriceTextBox.TabIndex = 5;
             // 
-            // textBox4
+            // salePriceTextBox
             // 
-            textBox4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.ForeColor = Color.DarkGreen;
-            textBox4.Location = new Point(401, 752);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Försäljningspris";
-            textBox4.Size = new Size(549, 38);
-            textBox4.TabIndex = 6;
+            salePriceTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            salePriceTextBox.ForeColor = Color.DarkGreen;
+            salePriceTextBox.Location = new Point(401, 752);
+            salePriceTextBox.Name = "salePriceTextBox";
+            salePriceTextBox.PlaceholderText = "Försäljningspris";
+            salePriceTextBox.Size = new Size(549, 38);
+            salePriceTextBox.TabIndex = 6;
             // 
-            // comboBox1
+            // categoryComboBox
             // 
-            comboBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.ForeColor = Color.DarkGreen;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(401, 806);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(549, 39);
-            comboBox1.TabIndex = 7;
-            comboBox1.Text = "Kategori";
+            categoryComboBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            categoryComboBox.ForeColor = Color.DarkGreen;
+            categoryComboBox.FormattingEnabled = true;
+            categoryComboBox.Location = new Point(401, 806);
+            categoryComboBox.Name = "categoryComboBox";
+            categoryComboBox.Size = new Size(549, 39);
+            categoryComboBox.TabIndex = 7;
+            categoryComboBox.Text = "Kategori";
             // 
-            // textBox5
+            // nycategorytxtbox
             // 
-            textBox5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox5.ForeColor = Color.DarkGreen;
-            textBox5.Location = new Point(394, 892);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Lägg till Ny kategori";
-            textBox5.Size = new Size(319, 38);
-            textBox5.TabIndex = 8;
+            nycategorytxtbox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            nycategorytxtbox.ForeColor = Color.DarkGreen;
+            nycategorytxtbox.Location = new Point(394, 892);
+            nycategorytxtbox.Name = "nycategorytxtbox";
+            nycategorytxtbox.PlaceholderText = "Lägg till Ny kategori";
+            nycategorytxtbox.Size = new Size(319, 38);
+            nycategorytxtbox.TabIndex = 8;
             // 
             // itemName
             // 
@@ -186,28 +200,29 @@
             itemName.TabIndex = 9;
             itemName.Text = "\"Ser du inte den kategori du letar efter? Du kan skapa en ny här.\"";
             // 
-            // button1
+            // nycategoriSave
             // 
-            button1.BackColor = Color.WhiteSmoke;
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.DarkGreen;
-            button1.Location = new Point(741, 891);
-            button1.Name = "button1";
-            button1.Size = new Size(215, 38);
-            button1.TabIndex = 10;
-            button1.Text = "Spara Ny kategori";
-            button1.UseVisualStyleBackColor = false;
+            nycategoriSave.BackColor = Color.WhiteSmoke;
+            nycategoriSave.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            nycategoriSave.ForeColor = Color.DarkGreen;
+            nycategoriSave.Location = new Point(741, 891);
+            nycategoriSave.Name = "nycategoriSave";
+            nycategoriSave.Size = new Size(215, 38);
+            nycategoriSave.TabIndex = 10;
+            nycategoriSave.Text = "Spara Ny kategori";
+            nycategoriSave.UseVisualStyleBackColor = false;
+            nycategoriSave.Click += nycategoriSave_Click;
             // 
-            // dateTimePicker1
+            // purchaseDateDateTimePicker
             // 
-            dateTimePicker1.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(404, 525);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(549, 38);
-            dateTimePicker1.TabIndex = 11;
-            dateTimePicker1.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
+            purchaseDateDateTimePicker.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            purchaseDateDateTimePicker.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            purchaseDateDateTimePicker.Format = DateTimePickerFormat.Short;
+            purchaseDateDateTimePicker.Location = new Point(404, 525);
+            purchaseDateDateTimePicker.Name = "purchaseDateDateTimePicker";
+            purchaseDateDateTimePicker.Size = new Size(549, 38);
+            purchaseDateDateTimePicker.TabIndex = 11;
+            purchaseDateDateTimePicker.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
             // label1
             // 
@@ -220,94 +235,37 @@
             label1.TabIndex = 12;
             label1.Text = "Inköpsdatum";
             // 
-            // openFileDialog1
+            // descriptionTextBox
             // 
-            openFileDialog1.FileName = "openFileDialog1";
+            descriptionTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            descriptionTextBox.ForeColor = Color.DarkGreen;
+            descriptionTextBox.Location = new Point(1131, 47);
+            descriptionTextBox.Multiline = true;
+            descriptionTextBox.Name = "descriptionTextBox";
+            descriptionTextBox.PlaceholderText = "Föremål beskrivning";
+            descriptionTextBox.ScrollBars = ScrollBars.Vertical;
+            descriptionTextBox.Size = new Size(580, 886);
+            descriptionTextBox.TabIndex = 13;
             // 
-            // textBox2
+            // saleLocationTextBox
             // 
-            textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.DarkGreen;
-            textBox2.Location = new Point(1131, 47);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Föremål beskrivning";
-            textBox2.ScrollBars = ScrollBars.Vertical;
-            textBox2.Size = new Size(580, 886);
-            textBox2.TabIndex = 13;
+            saleLocationTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            saleLocationTextBox.ForeColor = Color.DarkGreen;
+            saleLocationTextBox.Location = new Point(401, 633);
+            saleLocationTextBox.Name = "saleLocationTextBox";
+            saleLocationTextBox.PlaceholderText = "Försäljningsplats";
+            saleLocationTextBox.Size = new Size(549, 38);
+            saleLocationTextBox.TabIndex = 15;
             // 
-            // tabControl1
+            // purchaseLocationTextBox
             // 
-            tabControl1.Appearance = TabAppearance.Buttons;
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(397, 12);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(549, 376);
-            tabControl1.TabIndex = 14;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(pictureBox2);
-            tabPage1.Location = new Point(4, 32);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(541, 340);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Framsida";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox2.Dock = DockStyle.Fill;
-            pictureBox2.Location = new Point(3, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(535, 334);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(pictureBox3);
-            tabPage2.Location = new Point(4, 32);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(541, 340);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Baksida";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox3.Dock = DockStyle.Fill;
-            pictureBox3.Location = new Point(3, 3);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(535, 334);
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
-            // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox6.ForeColor = Color.DarkGreen;
-            textBox6.Location = new Point(401, 633);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Försäljningsplats";
-            textBox6.Size = new Size(549, 38);
-            textBox6.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            textBox7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox7.ForeColor = Color.DarkGreen;
-            textBox7.Location = new Point(401, 452);
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "Inköpsplats";
-            textBox7.Size = new Size(549, 38);
-            textBox7.TabIndex = 16;
+            purchaseLocationTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            purchaseLocationTextBox.ForeColor = Color.DarkGreen;
+            purchaseLocationTextBox.Location = new Point(401, 452);
+            purchaseLocationTextBox.Name = "purchaseLocationTextBox";
+            purchaseLocationTextBox.PlaceholderText = "Inköpsplats";
+            purchaseLocationTextBox.Size = new Size(549, 38);
+            purchaseLocationTextBox.TabIndex = 16;
             // 
             // label2
             // 
@@ -320,60 +278,115 @@
             label2.TabIndex = 18;
             label2.Text = "Försäljningsdatum";
             // 
-            // dateTimePicker2
+            // saleDateDateTimePicker
             // 
-            dateTimePicker2.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(401, 708);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(549, 38);
-            dateTimePicker2.TabIndex = 17;
-            dateTimePicker2.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
+            saleDateDateTimePicker.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            saleDateDateTimePicker.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            saleDateDateTimePicker.Format = DateTimePickerFormat.Short;
+            saleDateDateTimePicker.Location = new Point(401, 708);
+            saleDateDateTimePicker.Name = "saleDateDateTimePicker";
+            saleDateDateTimePicker.Size = new Size(549, 38);
+            saleDateDateTimePicker.TabIndex = 17;
+            saleDateDateTimePicker.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
-            // quitBtn
+            // saleDateCheckBox
             // 
-            quitBtn.BackColor = Color.WhiteSmoke;
-            quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            quitBtn.ForeColor = Color.DarkGreen;
-            quitBtn.Location = new Point(16, 775);
-            quitBtn.Name = "quitBtn";
-            quitBtn.Size = new Size(239, 47);
-            quitBtn.TabIndex = 4;
-            quitBtn.Text = "Stäng";
-            quitBtn.UseVisualStyleBackColor = false;
-            quitBtn.Click += quitBtn_Click;
+            saleDateCheckBox.AutoSize = true;
+            saleDateCheckBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            saleDateCheckBox.Location = new Point(377, 720);
+            saleDateCheckBox.Name = "saleDateCheckBox";
+            saleDateCheckBox.Size = new Size(18, 17);
+            saleDateCheckBox.TabIndex = 19;
+            saleDateCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // frontImagePictureBox
+            // 
+            frontImagePictureBox.BorderStyle = BorderStyle.Fixed3D;
+            frontImagePictureBox.Dock = DockStyle.Fill;
+            frontImagePictureBox.Location = new Point(3, 3);
+            frontImagePictureBox.Name = "frontImagePictureBox";
+            frontImagePictureBox.Size = new Size(536, 306);
+            frontImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            frontImagePictureBox.TabIndex = 20;
+            frontImagePictureBox.TabStop = false;
+            frontImagePictureBox.Click += frontImagePictureBox_Click_1;
+            // 
+            // backImagePictureBox
+            // 
+            backImagePictureBox.BorderStyle = BorderStyle.Fixed3D;
+            backImagePictureBox.Dock = DockStyle.Fill;
+            backImagePictureBox.Location = new Point(3, 3);
+            backImagePictureBox.Name = "backImagePictureBox";
+            backImagePictureBox.Size = new Size(536, 306);
+            backImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            backImagePictureBox.TabIndex = 21;
+            backImagePictureBox.TabStop = false;
+            backImagePictureBox.Click += backImagePictureBox_Click_1;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Appearance = TabAppearance.Buttons;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(400, 34);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(550, 348);
+            tabControl1.TabIndex = 22;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(frontImagePictureBox);
+            tabPage1.Location = new Point(4, 32);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(542, 312);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Framsida";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(backImagePictureBox);
+            tabPage2.Location = new Point(4, 32);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(542, 312);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Baksida";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1739, 945);
-            Controls.Add(label2);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
             Controls.Add(tabControl1);
-            Controls.Add(textBox2);
+            Controls.Add(saleDateCheckBox);
+            Controls.Add(label2);
+            Controls.Add(saleDateDateTimePicker);
+            Controls.Add(purchaseLocationTextBox);
+            Controls.Add(saleLocationTextBox);
+            Controls.Add(descriptionTextBox);
             Controls.Add(label1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(button1);
+            Controls.Add(purchaseDateDateTimePicker);
+            Controls.Add(nycategoriSave);
             Controls.Add(itemName);
-            Controls.Add(textBox5);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox1);
+            Controls.Add(nycategorytxtbox);
+            Controls.Add(categoryComboBox);
+            Controls.Add(salePriceTextBox);
+            Controls.Add(purchasePriceTextBox);
+            Controls.Add(txtItemName);
             Controls.Add(panel1);
             MaximizeBox = false;
             Name = "Form2";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)frontImagePictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)backImagePictureBox).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -384,27 +397,28 @@
         private Button addBtn;
         private Button hemBtn;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private ComboBox comboBox1;
-        private TextBox textBox5;
+        private TextBox txtItemName;
+        private TextBox purchasePriceTextBox;
+        private TextBox salePriceTextBox;
+        private ComboBox categoryComboBox;
+        private TextBox nycategorytxtbox;
         private Label itemName;
-        private Button button1;
-        private DateTimePicker dateTimePicker1;
+        private Button nycategoriSave;
+        private DateTimePicker purchaseDateDateTimePicker;
         private Label label1;
-        private OpenFileDialog openFileDialog1;
-        private TextBox textBox2;
+
+        private TextBox descriptionTextBox;
         private Button updateBtn;
+        private TextBox saleLocationTextBox;
+        private TextBox purchaseLocationTextBox;
+        private Label label2;
+        private DateTimePicker saleDateDateTimePicker;
+        private Button quitBtn;
+        private CheckBox saleDateCheckBox;
+        private PictureBox frontImagePictureBox;
+        private PictureBox backImagePictureBox;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private PictureBox pictureBox2;
         private TabPage tabPage2;
-        private PictureBox pictureBox3;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private Label label2;
-        private DateTimePicker dateTimePicker2;
-        private Button quitBtn;
     }
 }

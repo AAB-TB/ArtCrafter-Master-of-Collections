@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            quitBtn = new Button();
             reportBtn = new Button();
             addBtn = new Button();
             hemBtn = new Button();
@@ -38,7 +39,6 @@
             label1 = new Label();
             listBox1 = new ListBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            quitBtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -55,6 +55,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(270, 921);
             panel1.TabIndex = 0;
+            // 
+            // quitBtn
+            // 
+            quitBtn.BackColor = Color.WhiteSmoke;
+            quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            quitBtn.ForeColor = Color.DarkGreen;
+            quitBtn.Location = new Point(16, 810);
+            quitBtn.Name = "quitBtn";
+            quitBtn.Size = new Size(239, 47);
+            quitBtn.TabIndex = 8;
+            quitBtn.Text = "Stäng";
+            quitBtn.UseVisualStyleBackColor = false;
+            quitBtn.Click += quitBtn_Click;
             // 
             // reportBtn
             // 
@@ -139,23 +152,11 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Location = new Point(309, 226);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1397, 707);
             flowLayoutPanel1.TabIndex = 4;
-            // 
-            // quitBtn
-            // 
-            quitBtn.BackColor = Color.WhiteSmoke;
-            quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            quitBtn.ForeColor = Color.DarkGreen;
-            quitBtn.Location = new Point(16, 810);
-            quitBtn.Name = "quitBtn";
-            quitBtn.Size = new Size(239, 47);
-            quitBtn.TabIndex = 8;
-            quitBtn.Text = "Stäng";
-            quitBtn.UseVisualStyleBackColor = false;
-            quitBtn.Click += quitBtn_Click;
             // 
             // Form1
             // 

@@ -12,7 +12,7 @@ namespace ArtCrafter.MasterofCollections
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        public Form3(int selectedId)
         {
             InitializeComponent();
         }
