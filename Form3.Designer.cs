@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             panel1 = new Panel();
             button2 = new Button();
-            button1 = new Button();
+            takeForm2Btn = new Button();
             hemBtn = new Button();
             pictureBox1 = new PictureBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
             pictureBox2 = new PictureBox();
+            tabPage2 = new TabPage();
             pictureBox3 = new PictureBox();
             groupBox1 = new GroupBox();
             label3 = new Label();
@@ -55,12 +55,13 @@
             label9 = new Label();
             dateTimePicker3 = new DateTimePicker();
             textBox8 = new TextBox();
+            quitbtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -69,13 +70,14 @@
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
+            panel1.Controls.Add(quitbtn);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(takeForm2Btn);
             panel1.Controls.Add(hemBtn);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(270, 823);
+            panel1.Size = new Size(270, 908);
             panel1.TabIndex = 1;
             // 
             // button2
@@ -90,17 +92,18 @@
             button2.Text = "Ta bort föremål";
             button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // takeForm2Btn
             // 
-            button1.BackColor = Color.WhiteSmoke;
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.DarkGreen;
-            button1.Location = new Point(16, 401);
-            button1.Name = "button1";
-            button1.Size = new Size(239, 47);
-            button1.TabIndex = 3;
-            button1.Text = "Redigera föremål";
-            button1.UseVisualStyleBackColor = false;
+            takeForm2Btn.BackColor = Color.WhiteSmoke;
+            takeForm2Btn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            takeForm2Btn.ForeColor = Color.DarkGreen;
+            takeForm2Btn.Location = new Point(16, 401);
+            takeForm2Btn.Name = "takeForm2Btn";
+            takeForm2Btn.Size = new Size(239, 47);
+            takeForm2Btn.TabIndex = 3;
+            takeForm2Btn.Text = "Redigera föremål";
+            takeForm2Btn.UseVisualStyleBackColor = false;
+            takeForm2Btn.Click += takeForm2Btn_Click;
             // 
             // hemBtn
             // 
@@ -113,6 +116,7 @@
             hemBtn.TabIndex = 1;
             hemBtn.Text = "Hem";
             hemBtn.UseVisualStyleBackColor = false;
+            hemBtn.Click += hemBtn_Click;
             // 
             // pictureBox1
             // 
@@ -128,12 +132,12 @@
             // 
             textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             textBox2.ForeColor = Color.DarkGreen;
-            textBox2.Location = new Point(379, 572);
+            textBox2.Location = new Point(379, 586);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Föremål beskrivning";
             textBox2.ScrollBars = ScrollBars.Vertical;
-            textBox2.Size = new Size(1272, 263);
+            textBox2.Size = new Size(1272, 334);
             textBox2.TabIndex = 14;
             // 
             // textBox1
@@ -168,6 +172,16 @@
             tabPage1.Text = "Framsida";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Dock = DockStyle.Fill;
+            pictureBox2.Location = new Point(3, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(561, 446);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
             // tabPage2
             // 
             tabPage2.Controls.Add(pictureBox3);
@@ -178,16 +192,6 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Baksida";
             tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Dock = DockStyle.Fill;
-            pictureBox2.Location = new Point(3, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(561, 446);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -361,11 +365,24 @@
             textBox8.Size = new Size(343, 38);
             textBox8.TabIndex = 26;
             // 
+            // quitbtn
+            // 
+            quitbtn.BackColor = Color.WhiteSmoke;
+            quitbtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            quitbtn.ForeColor = Color.DarkGreen;
+            quitbtn.Location = new Point(16, 717);
+            quitbtn.Name = "quitbtn";
+            quitbtn.Size = new Size(239, 47);
+            quitbtn.TabIndex = 5;
+            quitbtn.Text = "Stäng";
+            quitbtn.UseVisualStyleBackColor = false;
+            quitbtn.Click += quitbtn_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1739, 847);
+            ClientSize = new Size(1739, 945);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(tabControl1);
@@ -378,8 +395,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -393,7 +410,7 @@
 
         private Panel panel1;
         private Button button2;
-        private Button button1;
+        private Button takeForm2Btn;
         private Button hemBtn;
         private PictureBox pictureBox1;
         private TextBox textBox2;
@@ -417,5 +434,6 @@
         private Label label9;
         private DateTimePicker dateTimePicker3;
         private TextBox textBox8;
+        private Button quitbtn;
     }
 }

@@ -16,5 +16,24 @@ namespace ArtCrafter.MasterofCollections
         {
             InitializeComponent();
         }
+
+        private void hemBtn_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void takeForm2Btn_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void quitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

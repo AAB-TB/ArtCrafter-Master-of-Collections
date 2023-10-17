@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel1 = new Panel();
+            updateBtn = new Button();
             addBtn = new Button();
             hemBtn = new Button();
             pictureBox1 = new PictureBox();
@@ -44,28 +45,29 @@
             label1 = new Label();
             openFileDialog1 = new OpenFileDialog();
             textBox2 = new TextBox();
-            updateBtn = new Button();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
             pictureBox2 = new PictureBox();
+            tabPage2 = new TabPage();
             pictureBox3 = new PictureBox();
             textBox6 = new TextBox();
             textBox7 = new TextBox();
             label2 = new Label();
             dateTimePicker2 = new DateTimePicker();
+            quitBtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
+            panel1.Controls.Add(quitBtn);
             panel1.Controls.Add(updateBtn);
             panel1.Controls.Add(addBtn);
             panel1.Controls.Add(hemBtn);
@@ -75,12 +77,24 @@
             panel1.Size = new Size(270, 921);
             panel1.TabIndex = 1;
             // 
+            // updateBtn
+            // 
+            updateBtn.BackColor = Color.WhiteSmoke;
+            updateBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            updateBtn.ForeColor = Color.DarkGreen;
+            updateBtn.Location = new Point(16, 612);
+            updateBtn.Name = "updateBtn";
+            updateBtn.Size = new Size(239, 47);
+            updateBtn.TabIndex = 3;
+            updateBtn.Text = "Uppdetera";
+            updateBtn.UseVisualStyleBackColor = false;
+            // 
             // addBtn
             // 
             addBtn.BackColor = Color.WhiteSmoke;
             addBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             addBtn.ForeColor = Color.DarkGreen;
-            addBtn.Location = new Point(16, 374);
+            addBtn.Location = new Point(16, 440);
             addBtn.Name = "addBtn";
             addBtn.Size = new Size(239, 47);
             addBtn.TabIndex = 2;
@@ -98,6 +112,7 @@
             hemBtn.TabIndex = 1;
             hemBtn.Text = "Hem";
             hemBtn.UseVisualStyleBackColor = false;
+            hemBtn.Click += hemBtn_Click;
             // 
             // pictureBox1
             // 
@@ -221,18 +236,6 @@
             textBox2.Size = new Size(580, 886);
             textBox2.TabIndex = 13;
             // 
-            // updateBtn
-            // 
-            updateBtn.BackColor = Color.WhiteSmoke;
-            updateBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            updateBtn.ForeColor = Color.DarkGreen;
-            updateBtn.Location = new Point(16, 487);
-            updateBtn.Name = "updateBtn";
-            updateBtn.Size = new Size(239, 47);
-            updateBtn.TabIndex = 3;
-            updateBtn.Text = "Uppdetera";
-            updateBtn.UseVisualStyleBackColor = false;
-            // 
             // tabControl1
             // 
             tabControl1.Appearance = TabAppearance.Buttons;
@@ -255,6 +258,16 @@
             tabPage1.Text = "Framsida";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox2.Dock = DockStyle.Fill;
+            pictureBox2.Location = new Point(3, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(535, 334);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
             // tabPage2
             // 
             tabPage2.Controls.Add(pictureBox3);
@@ -266,17 +279,9 @@
             tabPage2.Text = "Baksida";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Dock = DockStyle.Fill;
-            pictureBox2.Location = new Point(3, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(535, 334);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
             // pictureBox3
             // 
+            pictureBox3.BorderStyle = BorderStyle.Fixed3D;
             pictureBox3.Dock = DockStyle.Fill;
             pictureBox3.Location = new Point(3, 3);
             pictureBox3.Name = "pictureBox3";
@@ -326,6 +331,19 @@
             dateTimePicker2.TabIndex = 17;
             dateTimePicker2.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
+            // quitBtn
+            // 
+            quitBtn.BackColor = Color.WhiteSmoke;
+            quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            quitBtn.ForeColor = Color.DarkGreen;
+            quitBtn.Location = new Point(16, 775);
+            quitBtn.Name = "quitBtn";
+            quitBtn.Size = new Size(239, 47);
+            quitBtn.TabIndex = 4;
+            quitBtn.Text = "Stäng";
+            quitBtn.UseVisualStyleBackColor = false;
+            quitBtn.Click += quitBtn_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -353,8 +371,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -387,5 +405,6 @@
         private TextBox textBox7;
         private Label label2;
         private DateTimePicker dateTimePicker2;
+        private Button quitBtn;
     }
 }

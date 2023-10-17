@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
-            button5 = new Button();
+            reportBtn = new Button();
             addBtn = new Button();
             hemBtn = new Button();
             pictureBox1 = new PictureBox();
@@ -38,6 +38,7 @@
             label1 = new Label();
             listBox1 = new ListBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            quitBtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -45,38 +46,41 @@
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
-            panel1.Controls.Add(button5);
+            panel1.Controls.Add(quitBtn);
+            panel1.Controls.Add(reportBtn);
             panel1.Controls.Add(addBtn);
             panel1.Controls.Add(hemBtn);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(270, 823);
+            panel1.Size = new Size(270, 921);
             panel1.TabIndex = 0;
             // 
-            // button5
+            // reportBtn
             // 
-            button5.BackColor = Color.WhiteSmoke;
-            button5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.DarkGreen;
-            button5.Location = new Point(16, 712);
-            button5.Name = "button5";
-            button5.Size = new Size(239, 47);
-            button5.TabIndex = 7;
-            button5.Text = "Statistik";
-            button5.UseVisualStyleBackColor = false;
+            reportBtn.BackColor = Color.WhiteSmoke;
+            reportBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            reportBtn.ForeColor = Color.DarkGreen;
+            reportBtn.Location = new Point(16, 624);
+            reportBtn.Name = "reportBtn";
+            reportBtn.Size = new Size(239, 47);
+            reportBtn.TabIndex = 7;
+            reportBtn.Text = "Statistik";
+            reportBtn.UseVisualStyleBackColor = false;
+            reportBtn.Click += reportBtn_Click;
             // 
             // addBtn
             // 
             addBtn.BackColor = Color.WhiteSmoke;
             addBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             addBtn.ForeColor = Color.DarkGreen;
-            addBtn.Location = new Point(16, 473);
+            addBtn.Location = new Point(16, 425);
             addBtn.Name = "addBtn";
             addBtn.Size = new Size(239, 47);
             addBtn.TabIndex = 2;
             addBtn.Text = "Lägg till föremål";
             addBtn.UseVisualStyleBackColor = false;
+            addBtn.Click += addBtn_Click;
             // 
             // hemBtn
             // 
@@ -89,6 +93,7 @@
             hemBtn.TabIndex = 1;
             hemBtn.Text = "Hem";
             hemBtn.UseVisualStyleBackColor = false;
+            hemBtn.Click += hemBtn_Click;
             // 
             // pictureBox1
             // 
@@ -136,14 +141,27 @@
             // 
             flowLayoutPanel1.Location = new Point(309, 226);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1397, 609);
+            flowLayoutPanel1.Size = new Size(1397, 707);
             flowLayoutPanel1.TabIndex = 4;
+            // 
+            // quitBtn
+            // 
+            quitBtn.BackColor = Color.WhiteSmoke;
+            quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            quitBtn.ForeColor = Color.DarkGreen;
+            quitBtn.Location = new Point(16, 810);
+            quitBtn.Name = "quitBtn";
+            quitBtn.Size = new Size(239, 47);
+            quitBtn.TabIndex = 8;
+            quitBtn.Text = "Stäng";
+            quitBtn.UseVisualStyleBackColor = false;
+            quitBtn.Click += quitBtn_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1739, 847);
+            ClientSize = new Size(1739, 945);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(listBox1);
             Controls.Add(label1);
@@ -163,10 +181,11 @@
         private Button hemBtn;
         private PictureBox pictureBox1;
         private Button addBtn;
-        private Button button5;
+        private Button reportBtn;
         private TextBox textBox1;
         private Label label1;
         private ListBox listBox1;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button quitBtn;
     }
 }
