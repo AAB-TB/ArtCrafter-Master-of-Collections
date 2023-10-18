@@ -18,6 +18,7 @@ namespace ArtCrafter.MasterofCollections
         string connectionString = "Data Source=ALVIN-AB\\SQLEXPRESS;Initial Catalog=\"ArtCrafter: Master of Collections\";Integrated Security=True";
         private OpenFileDialog frontImageOpenFileDialog = new OpenFileDialog();
         private OpenFileDialog backImageOpenFileDialog = new OpenFileDialog();
+        private OpenFileDialog signatureOpenFileDialog = new OpenFileDialog();
         private int selectedItem;
 
         public Form2()
@@ -77,6 +78,7 @@ namespace ArtCrafter.MasterofCollections
                             // Load front and back images from file paths
                             string frontImageFilePath = reader["FrontImageFilePath"].ToString();
                             string backImageFilePath = reader["BackImageFilePath"].ToString();
+                            string SignatureImageFilePath = reader["SignatureImageFilePath"].ToString();
 
                             if (!string.IsNullOrEmpty(frontImageFilePath))
                             {
@@ -88,6 +90,11 @@ namespace ArtCrafter.MasterofCollections
                             {
                                 backImagePictureBox.Image = Image.FromFile(backImageFilePath);
                                 backImagePath = backImageFilePath; // Set the image path variable.
+                            }
+                            if (!string.IsNullOrEmpty(signature))
+                            {
+                                signaturePicturebox.Image = Image.FromFile(signature);
+                                signature = SignatureImageFilePath; // Set the image path variable.
                             }
                         }
                     }
@@ -168,8 +175,8 @@ namespace ArtCrafter.MasterofCollections
                         await connection.OpenAsync();
 
                         // Prepare the SQL command with parameters to prevent SQL injection.
-                        string sql = @"INSERT INTO CollectionItem (Name, PurchaseDate, PurchasePrice, PurchaseLocation, SaleDate, SalePrice, SaleLocation, FrontImageFilePath, BackImageFilePath, Description, CategoryID) 
-                               VALUES (@Name, @PurchaseDate, @PurchasePrice, @PurchaseLocation, @SaleDate, @SalePrice, @SaleLocation, @FrontImageFilePath, @BackImageFilePath, @Description, @CategoryID);";
+                        string sql = @"INSERT INTO CollectionItem (Name, PurchaseDate, PurchasePrice, PurchaseLocation, SaleDate, SalePrice, SaleLocation, FrontImageFilePath, BackImageFilePath, SignatureImageFilePath, Description, CategoryID) 
+                               VALUES (@Name, @PurchaseDate, @PurchasePrice, @PurchaseLocation, @SaleDate, @SalePrice, @SaleLocation, @FrontImageFilePath, @BackImageFilePath, @SignatureImageFilePath, @Description, @CategoryID);";
 
                         using SqlCommand command = new SqlCommand(sql, connection);
 
@@ -187,6 +194,7 @@ namespace ArtCrafter.MasterofCollections
                         command.Parameters.AddWithValue("@CategoryID", categoryComboBox.SelectedValue); // Assuming your ComboBox is data-bound.
                         command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath);
                         command.Parameters.AddWithValue("@BackImageFilePath", backImagePath);
+                        command.Parameters.AddWithValue("@SignatureImageFilePath", signature);
 
                         await command.ExecuteNonQueryAsync();
                     }
@@ -216,6 +224,8 @@ namespace ArtCrafter.MasterofCollections
             frontImagePictureBox.Tag = null;
             backImagePictureBox.Text = null;
             backImagePictureBox.Tag = null;
+            signaturePicturebox.Text = string.Empty;
+            signaturePicturebox.Tag = null;
             descriptionTextBox.Text = string.Empty;
             nycategorytxtbox.Text = string.Empty;
 
@@ -302,6 +312,7 @@ namespace ArtCrafter.MasterofCollections
 
         string frontImagePath; // Add this variable to store the front image path.
         string backImagePath;  // Add this variable to store the back image path.
+        string signature;
         private void frontImagePictureBox_Click_1(object sender, EventArgs e)
         {
             try
@@ -395,6 +406,23 @@ namespace ArtCrafter.MasterofCollections
                 {
                     MessageBox.Show("Please fill in all mandatory fields.");
                 }
+            }
+        }
+
+        private void signaturePicturebox_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                signatureOpenFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.ico";
+                if (signatureOpenFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    signature = signatureOpenFileDialog.FileName;
+                    signaturePicturebox.Image = Image.FromFile(signature);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error("signaturePictureBox_Click", ex);
             }
         }
     }

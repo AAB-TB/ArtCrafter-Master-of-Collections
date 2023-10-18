@@ -42,6 +42,7 @@
             frontsidePictureBox = new PictureBox();
             tabPage2 = new TabPage();
             backsidePictureBox = new PictureBox();
+            tabPage3 = new TabPage();
             groupBox1 = new GroupBox();
             sellDate = new TextBox();
             label3 = new Label();
@@ -56,6 +57,7 @@
             label8 = new Label();
             label9 = new Label();
             purchasePrice = new TextBox();
+            SignaturesidepictureBox = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
@@ -63,8 +65,10 @@
             ((System.ComponentModel.ISupportInitialize)frontsidePictureBox).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)backsidePictureBox).BeginInit();
+            tabPage3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SignaturesidepictureBox).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -169,6 +173,7 @@
             tabControl1.Appearance = TabAppearance.Buttons;
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(379, 75);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -216,6 +221,16 @@
             backsidePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             backsidePictureBox.TabIndex = 0;
             backsidePictureBox.TabStop = false;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(SignaturesidepictureBox);
+            tabPage3.Location = new Point(4, 32);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(567, 452);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Signature";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -377,6 +392,17 @@
             purchasePrice.Size = new Size(343, 38);
             purchasePrice.TabIndex = 26;
             // 
+            // SignaturesidepictureBox
+            // 
+            SignaturesidepictureBox.BorderStyle = BorderStyle.Fixed3D;
+            SignaturesidepictureBox.Dock = DockStyle.Fill;
+            SignaturesidepictureBox.Location = new Point(0, 0);
+            SignaturesidepictureBox.Name = "SignaturesidepictureBox";
+            SignaturesidepictureBox.Size = new Size(567, 452);
+            SignaturesidepictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            SignaturesidepictureBox.TabIndex = 0;
+            SignaturesidepictureBox.TabStop = false;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -397,10 +423,12 @@
             ((System.ComponentModel.ISupportInitialize)frontsidePictureBox).EndInit();
             tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)backsidePictureBox).EndInit();
+            tabPage3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SignaturesidepictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -434,5 +462,7 @@
         private TextBox sellDate;
         private TextBox purchaseDate;
         private Button deleteBtn;
+        private TabPage tabPage3;
+        private PictureBox SignaturesidepictureBox;
     }
 }

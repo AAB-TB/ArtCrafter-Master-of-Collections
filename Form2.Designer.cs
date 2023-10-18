@@ -55,6 +55,8 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
+            tabPage3 = new TabPage();
+            signaturePicturebox = new PictureBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -68,6 +70,8 @@
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)signaturePicturebox).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -105,7 +109,7 @@
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(239, 47);
             updateBtn.TabIndex = 3;
-            updateBtn.Text = "Uppdetera";
+            updateBtn.Text = "Uppdatera";
             updateBtn.UseVisualStyleBackColor = false;
             updateBtn.Click += updateBtn_Click;
             // 
@@ -118,7 +122,7 @@
             addBtn.Name = "addBtn";
             addBtn.Size = new Size(239, 47);
             addBtn.TabIndex = 2;
-            addBtn.Text = "Spara ny Föremål";
+            addBtn.Text = "Spara nytt Föremål";
             addBtn.UseVisualStyleBackColor = false;
             addBtn.Click += addBtn_Click;
             // 
@@ -190,9 +194,9 @@
             // 
             nycategorytxtbox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             nycategorytxtbox.ForeColor = Color.DarkGreen;
-            nycategorytxtbox.Location = new Point(535, 878);
+            nycategorytxtbox.Location = new Point(548, 868);
             nycategorytxtbox.Name = "nycategorytxtbox";
-            nycategorytxtbox.PlaceholderText = "Lägg till Ny kategori";
+            nycategorytxtbox.PlaceholderText = "Lägg till Ny kategori/ta bort";
             nycategorytxtbox.Size = new Size(319, 38);
             nycategorytxtbox.TabIndex = 8;
             // 
@@ -212,7 +216,7 @@
             nycategoriSave.BackColor = Color.WhiteSmoke;
             nycategoriSave.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             nycategoriSave.ForeColor = Color.DarkGreen;
-            nycategoriSave.Location = new Point(882, 877);
+            nycategoriSave.Location = new Point(879, 868);
             nycategoriSave.Name = "nycategoriSave";
             nycategoriSave.Size = new Size(215, 38);
             nycategoriSave.TabIndex = 10;
@@ -312,7 +316,7 @@
             frontImagePictureBox.Dock = DockStyle.Fill;
             frontImagePictureBox.Location = new Point(3, 3);
             frontImagePictureBox.Name = "frontImagePictureBox";
-            frontImagePictureBox.Size = new Size(744, 328);
+            frontImagePictureBox.Size = new Size(528, 328);
             frontImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             frontImagePictureBox.TabIndex = 20;
             frontImagePictureBox.TabStop = false;
@@ -335,6 +339,7 @@
             tabControl1.Appearance = TabAppearance.Buttons;
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(453, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -347,7 +352,7 @@
             tabPage1.Location = new Point(4, 32);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(750, 334);
+            tabPage1.Size = new Size(534, 334);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Framsida";
             tabPage1.UseVisualStyleBackColor = true;
@@ -362,6 +367,28 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Baksida";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(signaturePicturebox);
+            tabPage3.Location = new Point(4, 32);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(534, 334);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Signature";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // signaturePicturebox
+            // 
+            signaturePicturebox.BorderStyle = BorderStyle.Fixed3D;
+            signaturePicturebox.Dock = DockStyle.Fill;
+            signaturePicturebox.Location = new Point(0, 0);
+            signaturePicturebox.Name = "signaturePicturebox";
+            signaturePicturebox.Size = new Size(534, 334);
+            signaturePicturebox.SizeMode = PictureBoxSizeMode.StretchImage;
+            signaturePicturebox.TabIndex = 0;
+            signaturePicturebox.TabStop = false;
+            signaturePicturebox.Click += signaturePicturebox_Click;
             // 
             // label3
             // 
@@ -466,6 +493,8 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)signaturePicturebox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -505,5 +534,7 @@
         private Label label6;
         private Label label7;
         private Label label8;
+        private TabPage tabPage3;
+        private PictureBox signaturePicturebox;
     }
 }

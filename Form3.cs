@@ -57,6 +57,10 @@ namespace ArtCrafter.MasterofCollections
                 {
                     backsidePictureBox.Image = Image.FromFile(selectedCollectionItem.BackImageFilePath);
                 }
+                if (!string.IsNullOrEmpty(selectedCollectionItem.SignatureImageFilePath))
+                {
+                    SignaturesidepictureBox.Image = Image.FromFile(selectedCollectionItem.SignatureImageFilePath);
+                }
             }
             else
             {
@@ -70,11 +74,11 @@ namespace ArtCrafter.MasterofCollections
         private CollectionItem RetrieveCollectionItemDetailsFromDatabase(int collectionItemID)
         {
             string query = @"
-    SELECT
-        ID, Name, PurchaseDate, PurchasePrice, PurchaseLocation,
-        SaleDate, SalePrice, SaleLocation, FrontImageFilePath, BackImageFilePath, Description, CategoryID
-    FROM CollectionItem
-    WHERE ID = @CollectionItemID
+        SELECT
+            ID, Name, PurchaseDate, PurchasePrice, PurchaseLocation,
+            SaleDate, SalePrice, SaleLocation, FrontImageFilePath, BackImageFilePath, SignatureImageFilePath, Description, CategoryID
+        FROM CollectionItem
+        WHERE ID = @CollectionItemID
     ";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -85,24 +89,23 @@ namespace ArtCrafter.MasterofCollections
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
-                        reader.Read(); // Since there should be only one matching record
-
                         CollectionItem collectionItem = new CollectionItem
                         {
-                            ID = reader.IsDBNull(0) ? (int?)null : reader.GetInt32(0),
+                            ID = reader.GetInt32(0),
                             Name = reader.GetString(1),
                             PurchaseDate = reader.GetDateTime(2),
                             PurchasePrice = reader.GetDecimal(3),
                             PurchaseLocation = reader.GetString(4),
                             SaleDate = reader.IsDBNull(5) ? (DateTime?)null : reader.GetDateTime(5),
-                            SalePrice = reader.IsDBNull(6) ? (decimal?)null : reader.GetDecimal(6),
+                            SalePrice = reader.IsDBNull(6) ? (decimal?)null : (decimal?)reader.GetDecimal(6),
                             SaleLocation = reader.IsDBNull(7) ? null : reader.GetString(7),
                             FrontImageFilePath = reader.IsDBNull(8) ? null : reader.GetString(8),
                             BackImageFilePath = reader.IsDBNull(9) ? null : reader.GetString(9),
-                            Description = reader.IsDBNull(10) ? null : reader.GetString(10),
-                            CategoryID = reader.IsDBNull(11) ? (int?)null : reader.GetInt32(11)
+                            SignatureImageFilePath = reader.IsDBNull(10) ? null : reader.GetString(10),
+                            Description = reader.IsDBNull(11) ? null : reader.GetString(11),
+                            CategoryID = reader.GetInt32(12)
                         };
 
                         return collectionItem;
@@ -110,7 +113,6 @@ namespace ArtCrafter.MasterofCollections
                     else
                     {
                         // Handle the case where no matching collection item is found, e.g., display an error message or return null.
-                        // You may want to log this situation for debugging.
                         logger.Error($"CollectionItem with ID {collectionItemID} not found in the database.");
                     }
                 }
@@ -119,6 +121,7 @@ namespace ArtCrafter.MasterofCollections
             // Handle any other errors here.
             return null;
         }
+
 
         private void hemBtn_Click(object sender, EventArgs e)
         {
@@ -216,6 +219,7 @@ namespace ArtCrafter.MasterofCollections
             sellPrice.Text = "";
             frontsidePictureBox.Image = null;
             backsidePictureBox.Image = null;
+            SignaturesidepictureBox.Image = null;
 
             // You can also set other default values or clear any other controls you have on the form.
         }

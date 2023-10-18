@@ -18,6 +18,7 @@ namespace ArtCrafter.MasterofCollections
         public string SaleLocation { get; set; }
         public string FrontImageFilePath { get; set; }
         public string BackImageFilePath { get; set; }
+        public string SignatureImageFilePath { get; set; }
         public string Description { get; set; }
         public int? CategoryID { get; set; }
     }
