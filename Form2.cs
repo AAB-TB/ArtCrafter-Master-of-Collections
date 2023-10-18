@@ -18,12 +18,85 @@ namespace ArtCrafter.MasterofCollections
         string connectionString = "Data Source=ALVIN-AB\\SQLEXPRESS;Initial Catalog=\"ArtCrafter: Master of Collections\";Integrated Security=True";
         private OpenFileDialog frontImageOpenFileDialog = new OpenFileDialog();
         private OpenFileDialog backImageOpenFileDialog = new OpenFileDialog();
-
+        private int selectedItem;
 
         public Form2()
         {
             InitializeComponent();
             LoadCategories();
+        }
+        public Form2(int selectedItem)
+        {
+            InitializeComponent();
+            LoadCategories();
+            this.selectedItem = selectedItem;
+            LoadItemDetails(selectedItem);
+        }
+        private void LoadItemDetails(int selectedItem)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string getItemQuery = "SELECT * FROM CollectionItem WHERE ID = @ItemID";
+
+                    using (SqlCommand cmd = new SqlCommand(getItemQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ItemID", selectedItem);
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            txtItemName.Text = reader["Name"].ToString();
+                            purchaseDateDateTimePicker.Value = (DateTime)reader["PurchaseDate"];
+                            purchasePriceTextBox.Text = reader["PurchasePrice"].ToString();
+                            purchaseLocationTextBox.Text = reader["PurchaseLocation"].ToString();
+
+                            if (reader["SaleDate"] != DBNull.Value)
+                            {
+                                saleDateCheckBox.Checked = true;
+                                saleDateDateTimePicker.Value = (DateTime)reader["SaleDate"];
+                            }
+
+                            if (reader["SalePrice"] != DBNull.Value)
+                            {
+                                salePriceTextBox.Text = reader["SalePrice"].ToString();
+                            }
+
+                            if (reader["SaleLocation"] != DBNull.Value)
+                            {
+                                saleLocationTextBox.Text = reader["SaleLocation"].ToString();
+                            }
+
+                            descriptionTextBox.Text = reader["Description"].ToString();
+
+                            // Set the selected category in the ComboBox
+                            categoryComboBox.SelectedValue = reader["CategoryID"];
+
+                            // Load front and back images from file paths
+                            string frontImageFilePath = reader["FrontImageFilePath"].ToString();
+                            string backImageFilePath = reader["BackImageFilePath"].ToString();
+
+                            if (!string.IsNullOrEmpty(frontImageFilePath))
+                            {
+                                frontImagePictureBox.Image = Image.FromFile(frontImageFilePath);
+                                frontImagePath = frontImageFilePath; // Set the image path variable.
+                            }
+
+                            if (!string.IsNullOrEmpty(backImageFilePath))
+                            {
+                                backImagePictureBox.Image = Image.FromFile(backImageFilePath);
+                                backImagePath = backImageFilePath; // Set the image path variable.
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error("LoadItemDetails", ex);
+            }
         }
 
         private void hemBtn_Click(object sender, EventArgs e)
@@ -108,8 +181,8 @@ namespace ArtCrafter.MasterofCollections
                         command.Parameters.AddWithValue("@SaleDate", saleDateCheckBox.Checked ? (object)saleDateDateTimePicker.Value : DBNull.Value);
                         command.Parameters.AddWithValue("@SalePrice", string.IsNullOrEmpty(salePriceTextBox.Text) ? (object)DBNull.Value : decimal.Parse(salePriceTextBox.Text));
                         command.Parameters.AddWithValue("@SaleLocation", string.IsNullOrEmpty(saleLocationTextBox.Text) ? (object)DBNull.Value : saleLocationTextBox.Text);
-                       // command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePictureBox.ImageLocation);
-                       // command.Parameters.AddWithValue("@BackImageFilePath", backImagePictureBox.ImageLocation);
+                        // command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePictureBox.ImageLocation);
+                        // command.Parameters.AddWithValue("@BackImageFilePath", backImagePictureBox.ImageLocation);
                         command.Parameters.AddWithValue("@Description", descriptionTextBox.Text);
                         command.Parameters.AddWithValue("@CategoryID", categoryComboBox.SelectedValue); // Assuming your ComboBox is data-bound.
                         command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath);
@@ -260,6 +333,68 @@ namespace ArtCrafter.MasterofCollections
             catch (Exception ex)
             {
                 logger.Error("backImagePictureBox_Click", ex);
+            }
+        }
+
+
+        private async void updateBtn_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                if (ValidateFields()) // Custom method to validate mandatory fields.
+                {
+                    try
+                    {
+                        using (connection)
+                        {
+                            await connection.OpenAsync();
+
+                            // Prepare the SQL command with parameters to prevent SQL injection.
+                            string sql = @"
+                        UPDATE CollectionItem
+                        SET Name = @Name,
+                            PurchaseDate = @PurchaseDate,
+                            PurchasePrice = @PurchasePrice,
+                            PurchaseLocation = @PurchaseLocation,
+                            SaleDate = @SaleDate,
+                            SalePrice = @SalePrice,
+                            SaleLocation = @SaleLocation,
+                            FrontImageFilePath = @FrontImageFilePath,
+                            BackImageFilePath = @BackImageFilePath,
+                            Description = @Description,
+                            CategoryID = @CategoryID
+                        WHERE ID = @ItemID;
+                    ";
+
+                            using (SqlCommand command = new SqlCommand(sql, connection))
+                            {
+                                command.Parameters.AddWithValue("@ItemID", selectedItem); // Get the selected item's ID.
+                                command.Parameters.AddWithValue("@Name", txtItemName.Text);
+                                command.Parameters.AddWithValue("@PurchaseDate", purchaseDateDateTimePicker.Value);
+                                command.Parameters.AddWithValue("@PurchasePrice", decimal.Parse(purchasePriceTextBox.Text));
+                                command.Parameters.AddWithValue("@PurchaseLocation", purchaseLocationTextBox.Text);
+                                command.Parameters.AddWithValue("@SaleDate", saleDateCheckBox.Checked ? (object)saleDateDateTimePicker.Value : DBNull.Value);
+                                command.Parameters.AddWithValue("@SalePrice", string.IsNullOrEmpty(salePriceTextBox.Text) ? (object)DBNull.Value : decimal.Parse(salePriceTextBox.Text));
+                                command.Parameters.AddWithValue("@SaleLocation", string.IsNullOrEmpty(saleLocationTextBox.Text) ? (object)DBNull.Value : saleLocationTextBox.Text);
+                                command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath); // Updated image path.
+                                command.Parameters.AddWithValue("@BackImageFilePath", backImagePath); // Updated image path.
+                                command.Parameters.AddWithValue("@Description", descriptionTextBox.Text);
+                                command.Parameters.AddWithValue("@CategoryID", categoryComboBox.SelectedValue);
+
+                                await command.ExecuteNonQueryAsync();
+                            }
+                            MessageBox.Show("Item updated successfully!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please fill in all mandatory fields.");
+                }
             }
         }
     }

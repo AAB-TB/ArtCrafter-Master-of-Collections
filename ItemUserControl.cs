@@ -36,7 +36,7 @@ namespace ArtCrafter.MasterofCollections
 
         private void itemImage_Click(object sender, EventArgs e)
         {
-            int id = CollectionItem.ID;
+            int id = (int)CollectionItem.ID;
             parentForm.Hide();
             Form3 form3 = new Form3(id);
             form3.Show();
@@ -45,7 +45,7 @@ namespace ArtCrafter.MasterofCollections
 
         private void itemName_Click(object sender, EventArgs e)
         {
-            int id = CollectionItem.ID;
+            int id = (int)CollectionItem.ID;
             parentForm.Hide();
             Form3 form3 = new Form3(id);
             form3.Show();
