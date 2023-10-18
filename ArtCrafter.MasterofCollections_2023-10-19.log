@@ -1,0 +1,89 @@
+2023-10-19 00:13:22.4833|ERROR|An error occurred in SearchRecipesAsync for search text: Konst. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+2023-10-19 00:13:22.5721|ERROR|An error occurred in PerformSearch for selected suggestion: Konst. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+   at ArtCrafter.MasterofCollections.Form1.PerformSearch(String selectedSuggestion) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 263
+2023-10-19 00:13:56.0111|ERROR|An error occurred in SearchRecipesAsync for search text: sfs. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+2023-10-19 00:13:56.0510|ERROR|An error occurred in PerformSearch for selected suggestion: sfs. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+   at ArtCrafter.MasterofCollections.Form1.PerformSearch(String selectedSuggestion) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 263
+2023-10-19 00:18:33.1886|ERROR|An error occurred in SearchRecipesAsync for search text: Konst. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+2023-10-19 00:18:33.2830|ERROR|An error occurred in PerformSearch for selected suggestion: Konst. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+   at ArtCrafter.MasterofCollections.Form1.PerformSearch(String selectedSuggestion) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 263
+2023-10-19 00:21:02.5908|ERROR|An error occurred in SearchRecipesAsync for search text: sfs. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+2023-10-19 00:21:02.6687|ERROR|An error occurred in PerformSearch for selected suggestion: sfs. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+   at ArtCrafter.MasterofCollections.Form1.PerformSearch(String selectedSuggestion) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 263
+2023-10-19 00:21:45.4527|ERROR|An error occurred in SearchRecipesAsync for search text: Konst. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+2023-10-19 00:21:45.5157|ERROR|An error occurred in PerformSearch for selected suggestion: Konst. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+   at ArtCrafter.MasterofCollections.Form1.PerformSearch(String selectedSuggestion) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 263
+2023-10-19 00:22:38.1043|ERROR|An error occurred in SearchRecipesAsync for search text: sfs. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+2023-10-19 00:22:38.1608|ERROR|An error occurred in PerformSearch for selected suggestion: sfs. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchRecipesAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+   at ArtCrafter.MasterofCollections.Form1.PerformSearch(String selectedSuggestion) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 263
+2023-10-19 00:30:15.8672|ERROR|An error occurred in SearchRecipesAsync for search text: Konst. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchItemsAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+2023-10-19 00:30:15.9768|ERROR|An error occurred in PerformSearch for selected suggestion: Konst. Message: Index was outside the bounds of the array.|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at ArtCrafter.MasterofCollections.Form1.SearchItemsAsync(String searchText) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 316
+   at ArtCrafter.MasterofCollections.Form1.PerformSearch(String selectedSuggestion) in D:\Visual Studio c#\ArtCrafter.MasterofCollections\Form1.cs:line 263

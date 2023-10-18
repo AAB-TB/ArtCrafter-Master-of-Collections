@@ -35,9 +35,9 @@
             addBtn = new Button();
             hemBtn = new Button();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
+            searchtextbox = new TextBox();
             label1 = new Label();
-            listBox1 = new ListBox();
+            suggestionsListBox = new ListBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.CornflowerBlue;
+            panel1.BackColor = Color.LightSkyBlue;
             panel1.Controls.Add(quitBtn);
             panel1.Controls.Add(reportBtn);
             panel1.Controls.Add(addBtn);
@@ -118,15 +118,16 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // searchtextbox
             // 
-            textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.DarkGreen;
-            textBox1.Location = new Point(524, 89);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Sök kategori eller föremål";
-            textBox1.Size = new Size(863, 47);
-            textBox1.TabIndex = 1;
+            searchtextbox.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            searchtextbox.ForeColor = Color.DarkGreen;
+            searchtextbox.Location = new Point(524, 89);
+            searchtextbox.Name = "searchtextbox";
+            searchtextbox.PlaceholderText = "Sök kategori eller föremål";
+            searchtextbox.Size = new Size(863, 47);
+            searchtextbox.TabIndex = 1;
+            searchtextbox.TextChanged += searchtextbox_TextChanged;
             // 
             // label1
             // 
@@ -139,16 +140,18 @@
             label1.TabIndex = 2;
             label1.Text = "Artcraftör: Mästare av Samlingar";
             // 
-            // listBox1
+            // suggestionsListBox
             // 
-            listBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 37;
-            listBox1.Location = new Point(524, 142);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(863, 78);
-            listBox1.TabIndex = 3;
-            listBox1.Visible = false;
+            suggestionsListBox.BackColor = SystemColors.GradientActiveCaption;
+            suggestionsListBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            suggestionsListBox.FormattingEnabled = true;
+            suggestionsListBox.ItemHeight = 37;
+            suggestionsListBox.Location = new Point(524, 142);
+            suggestionsListBox.Name = "suggestionsListBox";
+            suggestionsListBox.Size = new Size(863, 78);
+            suggestionsListBox.TabIndex = 3;
+            suggestionsListBox.Visible = false;
+            suggestionsListBox.SelectedIndexChanged += suggestionsListBox_SelectedIndexChanged;
             // 
             // flowLayoutPanel1
             // 
@@ -162,11 +165,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.PowderBlue;
             ClientSize = new Size(1739, 945);
             Controls.Add(flowLayoutPanel1);
-            Controls.Add(listBox1);
+            Controls.Add(suggestionsListBox);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(searchtextbox);
             Controls.Add(panel1);
             MaximizeBox = false;
             Name = "Form1";
@@ -183,9 +187,9 @@
         private PictureBox pictureBox1;
         private Button addBtn;
         private Button reportBtn;
-        private TextBox textBox1;
+        private TextBox searchtextbox;
         private Label label1;
-        private ListBox listBox1;
+        private ListBox suggestionsListBox;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button quitBtn;
     }
