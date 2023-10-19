@@ -60,6 +60,8 @@
             label11 = new Label();
             totalBuyingCostBox = new TextBox();
             totalSellingCostBox = new TextBox();
+            resetbtn1 = new Button();
+            resetbtn2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -130,6 +132,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(resetbtn1);
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(totalProfitLossTextBox);
@@ -268,6 +271,7 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(resetbtn2);
             groupBox3.Controls.Add(locationComboBox);
             groupBox3.Controls.Add(groupBox4);
             groupBox3.Controls.Add(label9);
@@ -430,6 +434,32 @@
             totalSellingCostBox.Size = new Size(383, 38);
             totalSellingCostBox.TabIndex = 23;
             // 
+            // resetbtn1
+            // 
+            resetbtn1.BackColor = Color.WhiteSmoke;
+            resetbtn1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            resetbtn1.ForeColor = Color.DarkGreen;
+            resetbtn1.Location = new Point(1042, 181);
+            resetbtn1.Name = "resetbtn1";
+            resetbtn1.Size = new Size(205, 38);
+            resetbtn1.TabIndex = 29;
+            resetbtn1.Text = "Reset";
+            resetbtn1.UseVisualStyleBackColor = false;
+            resetbtn1.Click += resetbtn1_Click;
+            // 
+            // resetbtn2
+            // 
+            resetbtn2.BackColor = Color.WhiteSmoke;
+            resetbtn2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            resetbtn2.ForeColor = Color.DarkGreen;
+            resetbtn2.Location = new Point(1042, 191);
+            resetbtn2.Name = "resetbtn2";
+            resetbtn2.Size = new Size(205, 38);
+            resetbtn2.TabIndex = 30;
+            resetbtn2.Text = "Reset";
+            resetbtn2.UseVisualStyleBackColor = false;
+            resetbtn2.Click += resetbtn2_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -486,5 +516,7 @@
         private TextBox totalSellingCostBox;
         private ComboBox locationComboBox;
         private Button quitBtn;
+        private Button resetbtn1;
+        private Button resetbtn2;
     }
 }

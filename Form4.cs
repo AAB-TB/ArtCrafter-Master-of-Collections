@@ -155,7 +155,21 @@ namespace ArtCrafter.MasterofCollections
             }
             return totalCost;
         }
-    
+
+        private void resetbtn1_Click(object sender, EventArgs e)
+        {
+            totalBuyingCostTextBox.Text = "";
+            totalSellingCostTextBox.Text = "";
+            totalProfitLossTextBox.Text = "";
+
+        }
+
+        private void resetbtn2_Click(object sender, EventArgs e)
+        {
+            totalBuyingCostBox.Text = "";
+            totalSellingCostBox.Text = "";
+            totalProfitLossBox.Text = "";
+        }
     }
 
 }

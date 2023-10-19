@@ -43,6 +43,7 @@
             tabPage2 = new TabPage();
             backsidePictureBox = new PictureBox();
             tabPage3 = new TabPage();
+            SignaturesidepictureBox = new PictureBox();
             groupBox1 = new GroupBox();
             sellDate = new TextBox();
             label3 = new Label();
@@ -57,7 +58,8 @@
             label8 = new Label();
             label9 = new Label();
             purchasePrice = new TextBox();
-            SignaturesidepictureBox = new PictureBox();
+            label1 = new Label();
+            totalProfitLossTxtBx = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
@@ -66,9 +68,9 @@
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)backsidePictureBox).BeginInit();
             tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SignaturesidepictureBox).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)SignaturesidepictureBox).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -232,6 +234,17 @@
             tabPage3.Text = "Signature";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // SignaturesidepictureBox
+            // 
+            SignaturesidepictureBox.BorderStyle = BorderStyle.Fixed3D;
+            SignaturesidepictureBox.Dock = DockStyle.Fill;
+            SignaturesidepictureBox.Location = new Point(0, 0);
+            SignaturesidepictureBox.Name = "SignaturesidepictureBox";
+            SignaturesidepictureBox.Size = new Size(567, 452);
+            SignaturesidepictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            SignaturesidepictureBox.TabIndex = 0;
+            SignaturesidepictureBox.TabStop = false;
+            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(sellDate);
@@ -242,7 +255,7 @@
             groupBox1.Controls.Add(sellPrice);
             groupBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.DarkGreen;
-            groupBox1.Location = new Point(1020, 356);
+            groupBox1.Location = new Point(1020, 302);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(617, 189);
             groupBox1.TabIndex = 27;
@@ -322,7 +335,7 @@
             groupBox2.Controls.Add(purchasePrice);
             groupBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox2.ForeColor = Color.DarkGreen;
-            groupBox2.Location = new Point(1020, 123);
+            groupBox2.Location = new Point(1020, 107);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(617, 189);
             groupBox2.TabIndex = 28;
@@ -392,22 +405,34 @@
             purchasePrice.Size = new Size(343, 38);
             purchasePrice.TabIndex = 26;
             // 
-            // SignaturesidepictureBox
+            // label1
             // 
-            SignaturesidepictureBox.BorderStyle = BorderStyle.Fixed3D;
-            SignaturesidepictureBox.Dock = DockStyle.Fill;
-            SignaturesidepictureBox.Location = new Point(0, 0);
-            SignaturesidepictureBox.Name = "SignaturesidepictureBox";
-            SignaturesidepictureBox.Size = new Size(567, 452);
-            SignaturesidepictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            SignaturesidepictureBox.TabIndex = 0;
-            SignaturesidepictureBox.TabStop = false;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.DarkGreen;
+            label1.Location = new Point(1033, 521);
+            label1.Name = "label1";
+            label1.Size = new Size(207, 31);
+            label1.TabIndex = 30;
+            label1.Text = "Total vinst/förlust";
+            // 
+            // totalProfitLossTxtBx
+            // 
+            totalProfitLossTxtBx.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            totalProfitLossTxtBx.ForeColor = Color.DarkGreen;
+            totalProfitLossTxtBx.Location = new Point(1254, 518);
+            totalProfitLossTxtBx.Name = "totalProfitLossTxtBx";
+            totalProfitLossTxtBx.PlaceholderText = "Total vinst/förlust.\"";
+            totalProfitLossTxtBx.Size = new Size(383, 38);
+            totalProfitLossTxtBx.TabIndex = 29;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1739, 945);
+            Controls.Add(label1);
+            Controls.Add(totalProfitLossTxtBx);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(tabControl1);
@@ -424,11 +449,11 @@
             tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)backsidePictureBox).EndInit();
             tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)SignaturesidepictureBox).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)SignaturesidepictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -464,5 +489,7 @@
         private Button deleteBtn;
         private TabPage tabPage3;
         private PictureBox SignaturesidepictureBox;
+        private Label label1;
+        private TextBox totalProfitLossTxtBx;
     }
 }

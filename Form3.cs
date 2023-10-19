@@ -47,6 +47,15 @@ namespace ArtCrafter.MasterofCollections
                 purchasePrice.Text = selectedCollectionItem.PurchasePrice?.ToString() ?? string.Empty;
                 sellLocation.Text = selectedCollectionItem.SaleLocation;
                 sellPrice.Text = selectedCollectionItem.SalePrice?.ToString() ?? string.Empty;
+                // Calculate profit or loss
+                decimal profitOrLoss = (selectedCollectionItem.SalePrice ?? 0) - (selectedCollectionItem.PurchasePrice ?? 0);
+
+                // Compare profitOrLoss with zero to determine profit or loss
+                if (profitOrLoss < 0)
+                {
+                    totalProfitLossTxtBx.ForeColor = Color.Red; // Set text color to red for loss
+                }
+                totalProfitLossTxtBx.Text = profitOrLoss.ToString();
 
                 // Load front and back images from file paths
                 if (!string.IsNullOrEmpty(selectedCollectionItem.FrontImageFilePath))
@@ -224,5 +233,6 @@ namespace ArtCrafter.MasterofCollections
             // You can also set other default values or clear any other controls you have on the form.
         }
 
+        
     }
 }
