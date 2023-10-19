@@ -293,14 +293,12 @@ namespace ArtCrafter.MasterofCollections
                 {
                     await connection.OpenAsync();
 
-                    // SQL query to search for recipes based on title and category
-
                     string sqlQuery = @"
-                                    SELECT CI.ID, CI.Name, CI.FrontImageFilePath
-                                    FROM CollectionItem CI
-                                    JOIN Category C ON CI.CategoryID = C.CategoryID
-                                    WHERE (CI.Name LIKE @searchText + '%' OR C.CategoryName LIKE @searchText + '%');
-                                    ";
+                SELECT CI.ID, CI.Name, CI.FrontImageFilePath
+                FROM CollectionItem CI
+                JOIN Category C ON CI.CategoryID = C.CategoryID
+                WHERE (CI.Name LIKE @searchText + '%' OR C.CategoryName LIKE @searchText + '%');
+            ";
 
                     using (SqlCommand command = new SqlCommand(sqlQuery, connection))
                     {
@@ -310,18 +308,15 @@ namespace ArtCrafter.MasterofCollections
                         {
                             while (await reader.ReadAsync())
                             {
-                                int ID = reader.GetInt32(0);
-                                string name = reader.GetString(1);
-                                string frontImageFilePath = reader.GetString(2);
-                                //int categoryID = reader.GetInt32(3);
+                                int ID = reader.IsDBNull(0) ? 0 : reader.GetInt32(0); // Handle potential NULL in ID
+                                string name = reader.IsDBNull(1) ? string.Empty : reader.GetString(1); // Handle potential NULL in Name
+                                string frontImageFilePath = reader.IsDBNull(2) ? string.Empty : reader.GetString(2); // Handle potential NULL in FrontImageFilePath
 
-                                // Create a item object and add it to the search results
                                 CollectionItem item = new CollectionItem
                                 {
                                     ID = ID,
                                     Name = name,
                                     FrontImageFilePath = frontImageFilePath,
-                                    //CategoryID = categoryID
                                 };
 
                                 searchResults.Add(item);
@@ -332,10 +327,7 @@ namespace ArtCrafter.MasterofCollections
             }
             catch (Exception ex)
             {
-                // Log detailed error information using NLog
                 logger.Error(ex, "An error occurred in SearchRecipesAsync for search text: {0}. Message: {1}", searchText, ex.Message);
-
-                // You can choose to re-throw the exception if needed
                 throw;
             }
 
