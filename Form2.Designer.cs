@@ -84,7 +84,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(270, 921);
+            panel1.Size = new Size(270, 695);
             panel1.TabIndex = 1;
             // 
             // quitBtn
@@ -92,7 +92,7 @@
             quitBtn.BackColor = Color.WhiteSmoke;
             quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             quitBtn.ForeColor = Color.DarkGreen;
-            quitBtn.Location = new Point(16, 775);
+            quitBtn.Location = new Point(16, 537);
             quitBtn.Name = "quitBtn";
             quitBtn.Size = new Size(239, 47);
             quitBtn.TabIndex = 4;
@@ -105,7 +105,7 @@
             updateBtn.BackColor = Color.WhiteSmoke;
             updateBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             updateBtn.ForeColor = Color.DarkGreen;
-            updateBtn.Location = new Point(16, 594);
+            updateBtn.Location = new Point(16, 446);
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(239, 47);
             updateBtn.TabIndex = 3;
@@ -118,7 +118,7 @@
             addBtn.BackColor = Color.WhiteSmoke;
             addBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             addBtn.ForeColor = Color.DarkGreen;
-            addBtn.Location = new Point(16, 414);
+            addBtn.Location = new Point(16, 357);
             addBtn.Name = "addBtn";
             addBtn.Size = new Size(239, 47);
             addBtn.TabIndex = 2;
@@ -153,30 +153,30 @@
             // 
             txtItemName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             txtItemName.ForeColor = Color.DarkGreen;
-            txtItemName.Location = new Point(548, 382);
+            txtItemName.Location = new Point(518, 355);
             txtItemName.Name = "txtItemName";
             txtItemName.PlaceholderText = "Föremål Namn";
-            txtItemName.Size = new Size(549, 38);
+            txtItemName.Size = new Size(258, 38);
             txtItemName.TabIndex = 3;
             // 
             // purchasePriceTextBox
             // 
             purchasePriceTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             purchasePriceTextBox.ForeColor = Color.DarkGreen;
-            purchasePriceTextBox.Location = new Point(545, 565);
+            purchasePriceTextBox.Location = new Point(518, 530);
             purchasePriceTextBox.Name = "purchasePriceTextBox";
             purchasePriceTextBox.PlaceholderText = "Inköpspris";
-            purchasePriceTextBox.Size = new Size(549, 38);
+            purchasePriceTextBox.Size = new Size(258, 38);
             purchasePriceTextBox.TabIndex = 5;
             // 
             // salePriceTextBox
             // 
             salePriceTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             salePriceTextBox.ForeColor = Color.DarkGreen;
-            salePriceTextBox.Location = new Point(542, 733);
+            salePriceTextBox.Location = new Point(1041, 478);
             salePriceTextBox.Name = "salePriceTextBox";
             salePriceTextBox.PlaceholderText = "Försäljningspris";
-            salePriceTextBox.Size = new Size(549, 38);
+            salePriceTextBox.Size = new Size(258, 38);
             salePriceTextBox.TabIndex = 6;
             // 
             // categoryComboBox
@@ -184,9 +184,9 @@
             categoryComboBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             categoryComboBox.ForeColor = Color.DarkGreen;
             categoryComboBox.FormattingEnabled = true;
-            categoryComboBox.Location = new Point(542, 792);
+            categoryComboBox.Location = new Point(813, 549);
             categoryComboBox.Name = "categoryComboBox";
-            categoryComboBox.Size = new Size(549, 39);
+            categoryComboBox.Size = new Size(258, 39);
             categoryComboBox.TabIndex = 7;
             categoryComboBox.Text = "Kategori";
             // 
@@ -194,7 +194,7 @@
             // 
             nycategorytxtbox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             nycategorytxtbox.ForeColor = Color.DarkGreen;
-            nycategorytxtbox.Location = new Point(548, 868);
+            nycategorytxtbox.Location = new Point(327, 655);
             nycategorytxtbox.Name = "nycategorytxtbox";
             nycategorytxtbox.PlaceholderText = "Lägg till Ny kategori/ta bort";
             nycategorytxtbox.Size = new Size(319, 38);
@@ -205,7 +205,7 @@
             itemName.AutoSize = true;
             itemName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             itemName.ForeColor = Color.DarkGreen;
-            itemName.Location = new Point(336, 834);
+            itemName.Location = new Point(320, 608);
             itemName.Name = "itemName";
             itemName.Size = new Size(708, 31);
             itemName.TabIndex = 9;
@@ -216,7 +216,7 @@
             nycategoriSave.BackColor = Color.WhiteSmoke;
             nycategoriSave.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             nycategoriSave.ForeColor = Color.DarkGreen;
-            nycategoriSave.Location = new Point(879, 868);
+            nycategoriSave.Location = new Point(680, 655);
             nycategoriSave.Name = "nycategoriSave";
             nycategoriSave.Size = new Size(215, 38);
             nycategoriSave.TabIndex = 10;
@@ -229,9 +229,9 @@
             purchaseDateDateTimePicker.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             purchaseDateDateTimePicker.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             purchaseDateDateTimePicker.Format = DateTimePickerFormat.Short;
-            purchaseDateDateTimePicker.Location = new Point(545, 511);
+            purchaseDateDateTimePicker.Location = new Point(518, 478);
             purchaseDateDateTimePicker.Name = "purchaseDateDateTimePicker";
-            purchaseDateDateTimePicker.Size = new Size(549, 38);
+            purchaseDateDateTimePicker.Size = new Size(258, 38);
             purchaseDateDateTimePicker.TabIndex = 11;
             purchaseDateDateTimePicker.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
@@ -240,7 +240,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkGreen;
-            label1.Location = new Point(320, 511);
+            label1.Location = new Point(324, 478);
             label1.Name = "label1";
             label1.Size = new Size(156, 31);
             label1.TabIndex = 12;
@@ -248,34 +248,34 @@
             // 
             // descriptionTextBox
             // 
-            descriptionTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            descriptionTextBox.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             descriptionTextBox.ForeColor = Color.DarkGreen;
-            descriptionTextBox.Location = new Point(1131, 47);
+            descriptionTextBox.Location = new Point(801, 44);
             descriptionTextBox.Multiline = true;
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.PlaceholderText = "Föremål beskrivning";
             descriptionTextBox.ScrollBars = ScrollBars.Vertical;
-            descriptionTextBox.Size = new Size(580, 886);
+            descriptionTextBox.Size = new Size(501, 295);
             descriptionTextBox.TabIndex = 13;
             // 
             // saleLocationTextBox
             // 
             saleLocationTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             saleLocationTextBox.ForeColor = Color.DarkGreen;
-            saleLocationTextBox.Location = new Point(542, 619);
+            saleLocationTextBox.Location = new Point(1042, 358);
             saleLocationTextBox.Name = "saleLocationTextBox";
             saleLocationTextBox.PlaceholderText = "Försäljningsplats";
-            saleLocationTextBox.Size = new Size(549, 38);
+            saleLocationTextBox.Size = new Size(258, 38);
             saleLocationTextBox.TabIndex = 15;
             // 
             // purchaseLocationTextBox
             // 
             purchaseLocationTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             purchaseLocationTextBox.ForeColor = Color.DarkGreen;
-            purchaseLocationTextBox.Location = new Point(548, 447);
+            purchaseLocationTextBox.Location = new Point(518, 416);
             purchaseLocationTextBox.Name = "purchaseLocationTextBox";
             purchaseLocationTextBox.PlaceholderText = "Inköpsplats";
-            purchaseLocationTextBox.Size = new Size(549, 38);
+            purchaseLocationTextBox.Size = new Size(258, 38);
             purchaseLocationTextBox.TabIndex = 16;
             // 
             // label2
@@ -283,7 +283,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.DarkGreen;
-            label2.Location = new Point(320, 676);
+            label2.Location = new Point(804, 423);
             label2.Name = "label2";
             label2.Size = new Size(214, 31);
             label2.TabIndex = 18;
@@ -294,9 +294,9 @@
             saleDateDateTimePicker.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             saleDateDateTimePicker.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             saleDateDateTimePicker.Format = DateTimePickerFormat.Short;
-            saleDateDateTimePicker.Location = new Point(540, 676);
+            saleDateDateTimePicker.Location = new Point(1041, 423);
             saleDateDateTimePicker.Name = "saleDateDateTimePicker";
-            saleDateDateTimePicker.Size = new Size(549, 38);
+            saleDateDateTimePicker.Size = new Size(258, 38);
             saleDateDateTimePicker.TabIndex = 17;
             saleDateDateTimePicker.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
@@ -304,7 +304,7 @@
             // 
             saleDateCheckBox.AutoSize = true;
             saleDateCheckBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            saleDateCheckBox.Location = new Point(518, 706);
+            saleDateCheckBox.Location = new Point(1017, 433);
             saleDateCheckBox.Name = "saleDateCheckBox";
             saleDateCheckBox.Size = new Size(18, 17);
             saleDateCheckBox.TabIndex = 19;
@@ -316,7 +316,7 @@
             frontImagePictureBox.Dock = DockStyle.Fill;
             frontImagePictureBox.Location = new Point(3, 3);
             frontImagePictureBox.Name = "frontImagePictureBox";
-            frontImagePictureBox.Size = new Size(528, 328);
+            frontImagePictureBox.Size = new Size(446, 285);
             frontImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             frontImagePictureBox.TabIndex = 20;
             frontImagePictureBox.TabStop = false;
@@ -328,7 +328,7 @@
             backImagePictureBox.Dock = DockStyle.Fill;
             backImagePictureBox.Location = new Point(3, 3);
             backImagePictureBox.Name = "backImagePictureBox";
-            backImagePictureBox.Size = new Size(528, 328);
+            backImagePictureBox.Size = new Size(324, 285);
             backImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             backImagePictureBox.TabIndex = 21;
             backImagePictureBox.TabStop = false;
@@ -340,10 +340,10 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(453, 12);
+            tabControl1.Location = new Point(320, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(542, 370);
+            tabControl1.Size = new Size(460, 327);
             tabControl1.TabIndex = 22;
             // 
             // tabPage1
@@ -352,7 +352,7 @@
             tabPage1.Location = new Point(4, 32);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(534, 334);
+            tabPage1.Size = new Size(452, 291);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Framsida";
             tabPage1.UseVisualStyleBackColor = true;
@@ -363,7 +363,7 @@
             tabPage2.Location = new Point(4, 32);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(534, 334);
+            tabPage2.Size = new Size(330, 291);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Baksida";
             tabPage2.UseVisualStyleBackColor = true;
@@ -373,7 +373,7 @@
             tabPage3.Controls.Add(signaturePicturebox);
             tabPage3.Location = new Point(4, 32);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(534, 334);
+            tabPage3.Size = new Size(330, 291);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Signature";
             tabPage3.UseVisualStyleBackColor = true;
@@ -384,7 +384,7 @@
             signaturePicturebox.Dock = DockStyle.Fill;
             signaturePicturebox.Location = new Point(0, 0);
             signaturePicturebox.Name = "signaturePicturebox";
-            signaturePicturebox.Size = new Size(534, 334);
+            signaturePicturebox.Size = new Size(330, 291);
             signaturePicturebox.SizeMode = PictureBoxSizeMode.StretchImage;
             signaturePicturebox.TabIndex = 0;
             signaturePicturebox.TabStop = false;
@@ -395,7 +395,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.DarkGreen;
-            label3.Location = new Point(320, 385);
+            label3.Location = new Point(320, 358);
             label3.Name = "label3";
             label3.Size = new Size(172, 31);
             label3.TabIndex = 23;
@@ -406,7 +406,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.DarkGreen;
-            label4.Location = new Point(1131, 13);
+            label4.Location = new Point(801, 6);
             label4.Name = "label4";
             label4.Size = new Size(234, 31);
             label4.TabIndex = 24;
@@ -417,7 +417,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.DarkGreen;
-            label5.Location = new Point(320, 447);
+            label5.Location = new Point(324, 419);
             label5.Name = "label5";
             label5.Size = new Size(138, 31);
             label5.TabIndex = 25;
@@ -428,7 +428,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.DarkGreen;
-            label6.Location = new Point(320, 565);
+            label6.Location = new Point(324, 537);
             label6.Name = "label6";
             label6.Size = new Size(126, 31);
             label6.TabIndex = 26;
@@ -439,7 +439,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.DarkGreen;
-            label7.Location = new Point(320, 619);
+            label7.Location = new Point(801, 358);
             label7.Name = "label7";
             label7.Size = new Size(196, 31);
             label7.TabIndex = 27;
@@ -450,7 +450,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.DarkGreen;
-            label8.Location = new Point(320, 733);
+            label8.Location = new Point(804, 484);
             label8.Name = "label8";
             label8.Size = new Size(184, 31);
             label8.TabIndex = 28;
@@ -460,7 +460,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1739, 945);
+            ClientSize = new Size(1314, 724);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);

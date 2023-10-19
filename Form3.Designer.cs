@@ -83,7 +83,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(270, 908);
+            panel1.Size = new Size(270, 700);
             panel1.TabIndex = 1;
             // 
             // deleteBtn
@@ -91,7 +91,7 @@
             deleteBtn.BackColor = Color.WhiteSmoke;
             deleteBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             deleteBtn.ForeColor = Color.DarkGreen;
-            deleteBtn.Location = new Point(16, 552);
+            deleteBtn.Location = new Point(16, 483);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(239, 47);
             deleteBtn.TabIndex = 6;
@@ -104,7 +104,7 @@
             quitbtn.BackColor = Color.WhiteSmoke;
             quitbtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             quitbtn.ForeColor = Color.DarkGreen;
-            quitbtn.Location = new Point(16, 717);
+            quitbtn.Location = new Point(16, 595);
             quitbtn.Name = "quitbtn";
             quitbtn.Size = new Size(239, 47);
             quitbtn.TabIndex = 5;
@@ -117,7 +117,7 @@
             takeForm2Btn.BackColor = Color.WhiteSmoke;
             takeForm2Btn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             takeForm2Btn.ForeColor = Color.DarkGreen;
-            takeForm2Btn.Location = new Point(16, 401);
+            takeForm2Btn.Location = new Point(16, 366);
             takeForm2Btn.Name = "takeForm2Btn";
             takeForm2Btn.Size = new Size(239, 47);
             takeForm2Btn.TabIndex = 3;
@@ -152,22 +152,22 @@
             // 
             itemDescription.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             itemDescription.ForeColor = Color.DarkGreen;
-            itemDescription.Location = new Point(379, 586);
+            itemDescription.Location = new Point(772, 23);
             itemDescription.Multiline = true;
             itemDescription.Name = "itemDescription";
             itemDescription.PlaceholderText = "Föremål beskrivning";
             itemDescription.ScrollBars = ScrollBars.Vertical;
-            itemDescription.Size = new Size(1272, 334);
+            itemDescription.Size = new Size(502, 249);
             itemDescription.TabIndex = 14;
             // 
             // itemTitle
             // 
             itemTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             itemTitle.ForeColor = Color.DarkGreen;
-            itemTitle.Location = new Point(379, 22);
+            itemTitle.Location = new Point(320, 23);
             itemTitle.Name = "itemTitle";
             itemTitle.PlaceholderText = "Föremål Namn";
-            itemTitle.Size = new Size(575, 38);
+            itemTitle.Size = new Size(415, 38);
             itemTitle.TabIndex = 15;
             // 
             // tabControl1
@@ -176,10 +176,10 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(379, 75);
+            tabControl1.Location = new Point(316, 76);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(575, 488);
+            tabControl1.Size = new Size(426, 578);
             tabControl1.TabIndex = 16;
             // 
             // tabPage1
@@ -188,7 +188,7 @@
             tabPage1.Location = new Point(4, 32);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(567, 452);
+            tabPage1.Size = new Size(418, 542);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Framsida";
             tabPage1.UseVisualStyleBackColor = true;
@@ -198,7 +198,7 @@
             frontsidePictureBox.Dock = DockStyle.Fill;
             frontsidePictureBox.Location = new Point(3, 3);
             frontsidePictureBox.Name = "frontsidePictureBox";
-            frontsidePictureBox.Size = new Size(561, 446);
+            frontsidePictureBox.Size = new Size(412, 536);
             frontsidePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             frontsidePictureBox.TabIndex = 0;
             frontsidePictureBox.TabStop = false;
@@ -209,7 +209,7 @@
             tabPage2.Location = new Point(4, 32);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(567, 452);
+            tabPage2.Size = new Size(418, 542);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Baksida";
             tabPage2.UseVisualStyleBackColor = true;
@@ -220,7 +220,7 @@
             backsidePictureBox.Dock = DockStyle.Fill;
             backsidePictureBox.Location = new Point(3, 3);
             backsidePictureBox.Name = "backsidePictureBox";
-            backsidePictureBox.Size = new Size(561, 446);
+            backsidePictureBox.Size = new Size(412, 536);
             backsidePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             backsidePictureBox.TabIndex = 0;
             backsidePictureBox.TabStop = false;
@@ -230,7 +230,7 @@
             tabPage3.Controls.Add(SignaturesidepictureBox);
             tabPage3.Location = new Point(4, 32);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(567, 452);
+            tabPage3.Size = new Size(418, 542);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Signature";
             tabPage3.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@
             SignaturesidepictureBox.Dock = DockStyle.Fill;
             SignaturesidepictureBox.Location = new Point(0, 0);
             SignaturesidepictureBox.Name = "SignaturesidepictureBox";
-            SignaturesidepictureBox.Size = new Size(567, 452);
+            SignaturesidepictureBox.Size = new Size(418, 542);
             SignaturesidepictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             SignaturesidepictureBox.TabIndex = 0;
             SignaturesidepictureBox.TabStop = false;
@@ -256,9 +256,9 @@
             groupBox1.Controls.Add(sellPrice);
             groupBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.DarkGreen;
-            groupBox1.Location = new Point(1020, 302);
+            groupBox1.Location = new Point(772, 465);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(617, 189);
+            groupBox1.Size = new Size(502, 189);
             groupBox1.TabIndex = 27;
             groupBox1.TabStop = false;
             groupBox1.Text = "Försäljnings Historia";
@@ -270,7 +270,7 @@
             sellDate.Location = new Point(227, 86);
             sellDate.Name = "sellDate";
             sellDate.PlaceholderText = "Inköpningsplats";
-            sellDate.Size = new Size(343, 38);
+            sellDate.Size = new Size(269, 38);
             sellDate.TabIndex = 32;
             // 
             // label3
@@ -291,7 +291,7 @@
             sellLocation.Location = new Point(227, 36);
             sellLocation.Name = "sellLocation";
             sellLocation.PlaceholderText = "Försäljningsplats";
-            sellLocation.Size = new Size(343, 38);
+            sellLocation.Size = new Size(269, 38);
             sellLocation.TabIndex = 30;
             // 
             // label6
@@ -323,7 +323,7 @@
             sellPrice.Location = new Point(227, 133);
             sellPrice.Name = "sellPrice";
             sellPrice.PlaceholderText = "Försäljningspris";
-            sellPrice.Size = new Size(343, 38);
+            sellPrice.Size = new Size(269, 38);
             sellPrice.TabIndex = 26;
             // 
             // groupBox2
@@ -336,9 +336,9 @@
             groupBox2.Controls.Add(purchasePrice);
             groupBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox2.ForeColor = Color.DarkGreen;
-            groupBox2.Location = new Point(1020, 107);
+            groupBox2.Location = new Point(772, 278);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(617, 189);
+            groupBox2.Size = new Size(502, 189);
             groupBox2.TabIndex = 28;
             groupBox2.TabStop = false;
             groupBox2.Text = "Inköpnings Historia";
@@ -350,7 +350,7 @@
             purchaseDate.Location = new Point(227, 86);
             purchaseDate.Name = "purchaseDate";
             purchaseDate.PlaceholderText = "Inköpningsplats";
-            purchaseDate.Size = new Size(343, 38);
+            purchaseDate.Size = new Size(269, 38);
             purchaseDate.TabIndex = 32;
             // 
             // label4
@@ -371,7 +371,7 @@
             purchaseLocation.Location = new Point(227, 36);
             purchaseLocation.Name = "purchaseLocation";
             purchaseLocation.PlaceholderText = "Inköpningsplats";
-            purchaseLocation.Size = new Size(343, 38);
+            purchaseLocation.Size = new Size(269, 38);
             purchaseLocation.TabIndex = 30;
             // 
             // label8
@@ -403,7 +403,7 @@
             purchasePrice.Location = new Point(227, 133);
             purchasePrice.Name = "purchasePrice";
             purchasePrice.PlaceholderText = "Inköpningspris";
-            purchasePrice.Size = new Size(343, 38);
+            purchasePrice.Size = new Size(269, 38);
             purchasePrice.TabIndex = 26;
             // 
             // label1
@@ -411,7 +411,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkGreen;
-            label1.Location = new Point(1033, 521);
+            label1.Location = new Point(535, 681);
             label1.Name = "label1";
             label1.Size = new Size(207, 31);
             label1.TabIndex = 30;
@@ -421,17 +421,17 @@
             // 
             totalProfitLossTxtBx.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             totalProfitLossTxtBx.ForeColor = Color.DarkGreen;
-            totalProfitLossTxtBx.Location = new Point(1254, 518);
+            totalProfitLossTxtBx.Location = new Point(756, 678);
             totalProfitLossTxtBx.Name = "totalProfitLossTxtBx";
             totalProfitLossTxtBx.PlaceholderText = "Total vinst/förlust.\"";
-            totalProfitLossTxtBx.Size = new Size(383, 38);
+            totalProfitLossTxtBx.Size = new Size(225, 38);
             totalProfitLossTxtBx.TabIndex = 29;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1739, 945);
+            ClientSize = new Size(1314, 724);
             Controls.Add(label1);
             Controls.Add(totalProfitLossTxtBx);
             Controls.Add(groupBox2);
@@ -440,8 +440,8 @@
             Controls.Add(itemTitle);
             Controls.Add(itemDescription);
             Controls.Add(panel1);
+            MaximizeBox = false;
             Name = "Form3";
-            Text = "Form3";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
