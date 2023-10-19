@@ -169,6 +169,8 @@ namespace ArtCrafter.MasterofCollections
             totalBuyingCostBox.Text = "";
             totalSellingCostBox.Text = "";
             totalProfitLossBox.Text = "";
+
+            locationComboBox.SelectedItem = null;
         }
     }
 
