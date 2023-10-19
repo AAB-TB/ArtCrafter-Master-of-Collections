@@ -53,7 +53,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(270, 921);
+            panel1.Size = new Size(270, 689);
             panel1.TabIndex = 0;
             // 
             // quitBtn
@@ -61,7 +61,7 @@
             quitBtn.BackColor = Color.WhiteSmoke;
             quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             quitBtn.ForeColor = Color.DarkGreen;
-            quitBtn.Location = new Point(16, 810);
+            quitBtn.Location = new Point(16, 564);
             quitBtn.Name = "quitBtn";
             quitBtn.Size = new Size(239, 47);
             quitBtn.TabIndex = 8;
@@ -74,7 +74,7 @@
             reportBtn.BackColor = Color.WhiteSmoke;
             reportBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             reportBtn.ForeColor = Color.DarkGreen;
-            reportBtn.Location = new Point(16, 624);
+            reportBtn.Location = new Point(16, 456);
             reportBtn.Name = "reportBtn";
             reportBtn.Size = new Size(239, 47);
             reportBtn.TabIndex = 7;
@@ -87,7 +87,7 @@
             addBtn.BackColor = Color.WhiteSmoke;
             addBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             addBtn.ForeColor = Color.DarkGreen;
-            addBtn.Location = new Point(16, 425);
+            addBtn.Location = new Point(16, 360);
             addBtn.Name = "addBtn";
             addBtn.Size = new Size(239, 47);
             addBtn.TabIndex = 2;
@@ -122,7 +122,7 @@
             // 
             searchtextbox.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             searchtextbox.ForeColor = Color.DarkGreen;
-            searchtextbox.Location = new Point(524, 89);
+            searchtextbox.Location = new Point(361, 89);
             searchtextbox.Name = "searchtextbox";
             searchtextbox.PlaceholderText = "Sök kategori eller föremål";
             searchtextbox.Size = new Size(863, 47);
@@ -134,7 +134,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkGreen;
-            label1.Location = new Point(704, 34);
+            label1.Location = new Point(500, 34);
             label1.Name = "label1";
             label1.Size = new Size(483, 41);
             label1.TabIndex = 2;
@@ -146,7 +146,7 @@
             suggestionsListBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             suggestionsListBox.FormattingEnabled = true;
             suggestionsListBox.ItemHeight = 37;
-            suggestionsListBox.Location = new Point(524, 142);
+            suggestionsListBox.Location = new Point(361, 142);
             suggestionsListBox.Name = "suggestionsListBox";
             suggestionsListBox.ScrollAlwaysVisible = true;
             suggestionsListBox.Size = new Size(863, 78);
@@ -159,7 +159,7 @@
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Location = new Point(309, 226);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1397, 707);
+            flowLayoutPanel1.Size = new Size(978, 482);
             flowLayoutPanel1.TabIndex = 4;
             // 
             // Form1
@@ -167,7 +167,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1739, 945);
+            ClientSize = new Size(1314, 724);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(suggestionsListBox);
             Controls.Add(label1);

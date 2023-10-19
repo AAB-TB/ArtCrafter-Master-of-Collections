@@ -38,7 +38,7 @@
             itemImage.BorderStyle = BorderStyle.Fixed3D;
             itemImage.Location = new Point(14, 15);
             itemImage.Name = "itemImage";
-            itemImage.Size = new Size(239, 247);
+            itemImage.Size = new Size(190, 194);
             itemImage.SizeMode = PictureBoxSizeMode.StretchImage;
             itemImage.TabIndex = 0;
             itemImage.TabStop = false;
@@ -49,7 +49,7 @@
             itemName.AutoSize = true;
             itemName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             itemName.ForeColor = Color.DarkGreen;
-            itemName.Location = new Point(14, 265);
+            itemName.Location = new Point(14, 222);
             itemName.Name = "itemName";
             itemName.Size = new Size(79, 31);
             itemName.TabIndex = 1;
@@ -64,7 +64,7 @@
             Controls.Add(itemName);
             Controls.Add(itemImage);
             Name = "ItemUserControl";
-            Size = new Size(269, 313);
+            Size = new Size(218, 261);
             ((System.ComponentModel.ISupportInitialize)itemImage).EndInit();
             ResumeLayout(false);
             PerformLayout();

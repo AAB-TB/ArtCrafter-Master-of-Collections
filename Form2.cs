@@ -15,7 +15,8 @@ namespace ArtCrafter.MasterofCollections
     public partial class Form2 : Form
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        string connectionString = "Data Source=ALVIN-AB\\SQLEXPRESS;Initial Catalog=\"ArtCrafter: Master of Collections\";Integrated Security=True";
+
+        string connectionString = Configuration.GetConnectionString();
         private OpenFileDialog frontImageOpenFileDialog = new OpenFileDialog();
         private OpenFileDialog backImageOpenFileDialog = new OpenFileDialog();
         private OpenFileDialog signatureOpenFileDialog = new OpenFileDialog();

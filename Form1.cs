@@ -8,11 +8,12 @@ namespace ArtCrafter.MasterofCollections
     public partial class Form1 : Form
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        string connectionString = "Data Source=ALVIN-AB\\SQLEXPRESS;Initial Catalog=\"ArtCrafter: Master of Collections\";Integrated Security=True";
+        string connectionString = Configuration.GetConnectionString();
         public Form1()
         {
             InitializeComponent();
             Load += async (sender, e) => await LoadDataAsync();
+
         }
 
         public async Task LoadDataAsync()
@@ -125,7 +126,7 @@ namespace ArtCrafter.MasterofCollections
             Application.Exit();
         }
 
-        private void searchtextbox_TextChanged(object sender, EventArgs e)
+        private async void searchtextbox_TextChanged(object sender, EventArgs e)
         {
             string searchText = searchtextbox.Text;
 
@@ -139,7 +140,7 @@ namespace ArtCrafter.MasterofCollections
                 }
                 else
                 {
-                    LoadDataAsync();
+                    await LoadDataAsync();
                 }
             }
             catch (Exception ex)
@@ -333,6 +334,7 @@ namespace ArtCrafter.MasterofCollections
 
             return searchResults;
         }
+
 
 
     }

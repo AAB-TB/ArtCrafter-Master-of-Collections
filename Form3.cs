@@ -16,7 +16,7 @@ namespace ArtCrafter.MasterofCollections
     public partial class Form3 : Form
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        string connectionString = "Data Source=ALVIN-AB\\SQLEXPRESS;Initial Catalog=\"ArtCrafter: Master of Collections\";Integrated Security=True";
+        string connectionString = Configuration.GetConnectionString();
 
         CollectionItem selectedCollectionItem;
         public Form3(int selectedCollectionItemID)

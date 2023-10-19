@@ -14,7 +14,7 @@ namespace ArtCrafter.MasterofCollections
 {
     public partial class Form4 : Form
     {
-        string connectionString = "Data Source=ALVIN-AB\\SQLEXPRESS;Initial Catalog=\"ArtCrafter: Master of Collections\";Integrated Security=True";
+        string connectionString = Configuration.GetConnectionString();
         public Form4()
         {
             InitializeComponent();
@@ -100,46 +100,55 @@ namespace ArtCrafter.MasterofCollections
 
         private void generateRPbtn_Click(object sender, EventArgs e)
         {
-            string selectedLocation = locationComboBox.SelectedItem.ToString();
+            string selectedLocation = locationComboBox.SelectedItem?.ToString(); // Use ?. to handle null selected item
             DateTime fromDate = fromDateTimePicker2.Value.Date;
             DateTime tillDate = tillDateTimePicker2.Value.Date;
+            Console.WriteLine("Selected Location: " + selectedLocation);
 
-            decimal totalBuyingCost = 0;
-            decimal totalSellingCost = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            if (string.IsNullOrEmpty(selectedLocation))
             {
-                connection.Open();
+                // Show a warning message if no location is selected
+                MessageBox.Show("Please choose a location from the dropdown.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                decimal totalBuyingCost = 0;
+                decimal totalSellingCost = 0;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                string purchaseQuery = "SELECT ISNULL(PurchasePrice, 0) FROM CollectionItem " +
-                                       "WHERE PurchaseLocation = @Location " +
+                    string purchaseQuery = "SELECT ISNULL(PurchasePrice, 0) FROM CollectionItem " +
+                                           "WHERE PurchaseLocation = @Location " +
+                                           "AND (PurchaseDate >= @FromDate AND PurchaseDate <= @TillDate)";
+
+                    string saleQuery = "SELECT ISNULL(SalePrice, 0) FROM CollectionItem " +
+                                       "WHERE SaleLocation = @Location " +
                                        "AND (PurchaseDate >= @FromDate AND PurchaseDate <= @TillDate)";
 
-                string saleQuery = "SELECT ISNULL(SalePrice, 0) FROM CollectionItem " +
-                                   "WHERE SaleLocation = @Location " +
-                                   "AND (PurchaseDate >= @FromDate AND PurchaseDate <= @TillDate)";
+                    SqlCommand purchaseCommand = new SqlCommand(purchaseQuery, connection);
+                    SqlCommand saleCommand = new SqlCommand(saleQuery, connection);
 
-                SqlCommand purchaseCommand = new SqlCommand(purchaseQuery, connection);
-                SqlCommand saleCommand = new SqlCommand(saleQuery, connection);
+                    purchaseCommand.Parameters.AddWithValue("@Location", selectedLocation);
+                    saleCommand.Parameters.AddWithValue("@Location", selectedLocation);
+                    purchaseCommand.Parameters.AddWithValue("@FromDate", fromDate);
+                    saleCommand.Parameters.AddWithValue("@FromDate", fromDate);
+                    purchaseCommand.Parameters.AddWithValue("@TillDate", tillDate);
+                    saleCommand.Parameters.AddWithValue("@TillDate", tillDate);
 
-                purchaseCommand.Parameters.AddWithValue("@Location", selectedLocation);
-                saleCommand.Parameters.AddWithValue("@Location", selectedLocation);
-                purchaseCommand.Parameters.AddWithValue("@FromDate", fromDate);
-                saleCommand.Parameters.AddWithValue("@FromDate", fromDate);
-                purchaseCommand.Parameters.AddWithValue("@TillDate", tillDate);
-                saleCommand.Parameters.AddWithValue("@TillDate", tillDate);
+                    totalBuyingCost = CalculateTotalCost(purchaseCommand);
+                    totalSellingCost = CalculateTotalCost(saleCommand);
+                }
 
-                totalBuyingCost = CalculateTotalCost(purchaseCommand);
-                totalSellingCost = CalculateTotalCost(saleCommand);
+                decimal profitOrLoss = totalSellingCost - totalBuyingCost;
+
+                totalBuyingCostBox.Text = totalBuyingCost.ToString();
+                totalSellingCostBox.Text = totalSellingCost.ToString();
+                totalProfitLossBox.Text = profitOrLoss.ToString();
+
+                totalProfitLossBox.ForeColor = profitOrLoss >= 0 ? Color.Green : Color.Red;
             }
-
-            decimal profitOrLoss = totalSellingCost - totalBuyingCost;
-
-            totalBuyingCostBox.Text = totalBuyingCost.ToString();
-            totalSellingCostBox.Text = totalSellingCost.ToString();
-            totalProfitLossBox.Text = profitOrLoss.ToString();
-
-            totalProfitLossBox.ForeColor = profitOrLoss >= 0 ? Color.Green : Color.Red;
         }
 
         private decimal CalculateTotalCost(SqlCommand command)
@@ -169,7 +178,6 @@ namespace ArtCrafter.MasterofCollections
             totalBuyingCostBox.Text = "";
             totalSellingCostBox.Text = "";
             totalProfitLossBox.Text = "";
-
             locationComboBox.SelectedItem = null;
         }
     }
