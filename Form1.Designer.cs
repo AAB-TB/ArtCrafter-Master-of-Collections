@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightSkyBlue;
+            panel1.BackColor = Color.CornflowerBlue;
             panel1.Controls.Add(quitBtn);
             panel1.Controls.Add(reportBtn);
             panel1.Controls.Add(addBtn);
@@ -166,7 +166,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PowderBlue;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1739, 945);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(suggestionsListBox);
