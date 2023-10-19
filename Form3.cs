@@ -233,6 +233,6 @@ namespace ArtCrafter.MasterofCollections
             // You can also set other default values or clear any other controls you have on the form.
         }
 
-        
+
     }
 }

@@ -192,9 +192,35 @@ namespace ArtCrafter.MasterofCollections
                         // command.Parameters.AddWithValue("@BackImageFilePath", backImagePictureBox.ImageLocation);
                         command.Parameters.AddWithValue("@Description", descriptionTextBox.Text);
                         command.Parameters.AddWithValue("@CategoryID", categoryComboBox.SelectedValue); // Assuming your ComboBox is data-bound.
-                        command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath);
-                        command.Parameters.AddWithValue("@BackImageFilePath", backImagePath);
-                        command.Parameters.AddWithValue("@SignatureImageFilePath", signature);
+                        //command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath);
+                        //command.Parameters.AddWithValue("@BackImageFilePath", backImagePath);
+                        //command.Parameters.AddWithValue("@SignatureImageFilePath", signature);
+                        if (frontImagePath != null)
+                        {
+                            command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath);
+                        }
+                        else
+                        {
+                            command.Parameters.AddWithValue("@FrontImageFilePath", DBNull.Value);
+                        }
+
+                        if (backImagePath != null)
+                        {
+                            command.Parameters.AddWithValue("@BackImageFilePath", backImagePath);
+                        }
+                        else
+                        {
+                            command.Parameters.AddWithValue("@BackImageFilePath", DBNull.Value);
+                        }
+
+                        if (signature != null)
+                        {
+                            command.Parameters.AddWithValue("@SignatureImageFilePath", signature);
+                        }
+                        else
+                        {
+                            command.Parameters.AddWithValue("@SignatureImageFilePath", DBNull.Value);
+                        }
 
                         await command.ExecuteNonQueryAsync();
                     }

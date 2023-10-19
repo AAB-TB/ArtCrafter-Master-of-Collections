@@ -216,6 +216,7 @@
             // 
             // backsidePictureBox
             // 
+            backsidePictureBox.BorderStyle = BorderStyle.Fixed3D;
             backsidePictureBox.Dock = DockStyle.Fill;
             backsidePictureBox.Location = new Point(3, 3);
             backsidePictureBox.Name = "backsidePictureBox";

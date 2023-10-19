@@ -12,7 +12,7 @@ namespace ArtCrafter.MasterofCollections
         public Form1()
         {
             InitializeComponent();
-            LoadDataAsync();
+            Load += async (sender, e) => await LoadDataAsync();
         }
 
         public async Task LoadDataAsync()
