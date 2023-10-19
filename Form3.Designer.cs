@@ -195,6 +195,7 @@
             // 
             // frontsidePictureBox
             // 
+            frontsidePictureBox.BorderStyle = BorderStyle.Fixed3D;
             frontsidePictureBox.Dock = DockStyle.Fill;
             frontsidePictureBox.Location = new Point(3, 3);
             frontsidePictureBox.Name = "frontsidePictureBox";

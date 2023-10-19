@@ -229,7 +229,7 @@ namespace ArtCrafter.MasterofCollections
             frontsidePictureBox.Image = null;
             backsidePictureBox.Image = null;
             SignaturesidepictureBox.Image = null;
-
+            totalProfitLossTxtBx.Text = "";
             // You can also set other default values or clear any other controls you have on the form.
         }
 

@@ -196,7 +196,7 @@
             nycategorytxtbox.ForeColor = Color.DarkGreen;
             nycategorytxtbox.Location = new Point(327, 655);
             nycategorytxtbox.Name = "nycategorytxtbox";
-            nycategorytxtbox.PlaceholderText = "Lägg till Ny kategori/ta bort";
+            nycategorytxtbox.PlaceholderText = "Lägg till Ny kategori";
             nycategorytxtbox.Size = new Size(319, 38);
             nycategorytxtbox.TabIndex = 8;
             // 
@@ -248,7 +248,7 @@
             // 
             // descriptionTextBox
             // 
-            descriptionTextBox.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            descriptionTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             descriptionTextBox.ForeColor = Color.DarkGreen;
             descriptionTextBox.Location = new Point(801, 44);
             descriptionTextBox.Multiline = true;
@@ -316,7 +316,7 @@
             frontImagePictureBox.Dock = DockStyle.Fill;
             frontImagePictureBox.Location = new Point(3, 3);
             frontImagePictureBox.Name = "frontImagePictureBox";
-            frontImagePictureBox.Size = new Size(446, 285);
+            frontImagePictureBox.Size = new Size(346, 285);
             frontImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             frontImagePictureBox.TabIndex = 20;
             frontImagePictureBox.TabStop = false;
@@ -328,7 +328,7 @@
             backImagePictureBox.Dock = DockStyle.Fill;
             backImagePictureBox.Location = new Point(3, 3);
             backImagePictureBox.Name = "backImagePictureBox";
-            backImagePictureBox.Size = new Size(324, 285);
+            backImagePictureBox.Size = new Size(346, 285);
             backImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             backImagePictureBox.TabIndex = 21;
             backImagePictureBox.TabStop = false;
@@ -340,10 +340,10 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(320, 12);
+            tabControl1.Location = new Point(380, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(460, 327);
+            tabControl1.Size = new Size(360, 327);
             tabControl1.TabIndex = 22;
             // 
             // tabPage1
@@ -352,7 +352,7 @@
             tabPage1.Location = new Point(4, 32);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(452, 291);
+            tabPage1.Size = new Size(352, 291);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Framsida";
             tabPage1.UseVisualStyleBackColor = true;
@@ -363,7 +363,7 @@
             tabPage2.Location = new Point(4, 32);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(330, 291);
+            tabPage2.Size = new Size(352, 291);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Baksida";
             tabPage2.UseVisualStyleBackColor = true;
@@ -373,7 +373,7 @@
             tabPage3.Controls.Add(signaturePicturebox);
             tabPage3.Location = new Point(4, 32);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(330, 291);
+            tabPage3.Size = new Size(352, 291);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Signature";
             tabPage3.UseVisualStyleBackColor = true;
@@ -384,7 +384,7 @@
             signaturePicturebox.Dock = DockStyle.Fill;
             signaturePicturebox.Location = new Point(0, 0);
             signaturePicturebox.Name = "signaturePicturebox";
-            signaturePicturebox.Size = new Size(330, 291);
+            signaturePicturebox.Size = new Size(352, 291);
             signaturePicturebox.SizeMode = PictureBoxSizeMode.StretchImage;
             signaturePicturebox.TabIndex = 0;
             signaturePicturebox.TabStop = false;
