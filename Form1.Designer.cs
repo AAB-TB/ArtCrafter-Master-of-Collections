@@ -148,6 +148,7 @@
             suggestionsListBox.ItemHeight = 37;
             suggestionsListBox.Location = new Point(524, 142);
             suggestionsListBox.Name = "suggestionsListBox";
+            suggestionsListBox.ScrollAlwaysVisible = true;
             suggestionsListBox.Size = new Size(863, 78);
             suggestionsListBox.TabIndex = 3;
             suggestionsListBox.Visible = false;

@@ -30,36 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             panel1 = new Panel();
+            quitBtn = new Button();
             hemBtn = new Button();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            generaterp = new Button();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             label6 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            tilldatetimepicker = new DateTimePicker();
             label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            fromdatetimepicker = new DateTimePicker();
             label4 = new Label();
-            textBox1 = new TextBox();
+            totalProfitLossTextBox = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
+            totalBuyingCostTextBox = new TextBox();
+            totalSellingCostTextBox = new TextBox();
             groupBox3 = new GroupBox();
-            comboBox1 = new ComboBox();
+            locationComboBox = new ComboBox();
             groupBox4 = new GroupBox();
             label7 = new Label();
-            dateTimePicker3 = new DateTimePicker();
-            button2 = new Button();
+            tillDateTimePicker2 = new DateTimePicker();
+            generateRPbtn = new Button();
             label8 = new Label();
-            dateTimePicker4 = new DateTimePicker();
+            fromDateTimePicker2 = new DateTimePicker();
             label9 = new Label();
-            textBox2 = new TextBox();
+            totalProfitLossBox = new TextBox();
             label10 = new Label();
             label11 = new Label();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            quitBtn = new Button();
+            totalBuyingCostBox = new TextBox();
+            totalSellingCostBox = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -78,6 +78,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(270, 930);
             panel1.TabIndex = 1;
+            // 
+            // quitBtn
+            // 
+            quitBtn.BackColor = Color.WhiteSmoke;
+            quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            quitBtn.ForeColor = Color.DarkGreen;
+            quitBtn.Location = new Point(9, 538);
+            quitBtn.Name = "quitBtn";
+            quitBtn.Size = new Size(239, 47);
+            quitBtn.TabIndex = 2;
+            quitBtn.Text = "Stäng";
+            quitBtn.UseVisualStyleBackColor = false;
+            quitBtn.Click += quitBtn_Click;
             // 
             // hemBtn
             // 
@@ -102,27 +115,28 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // generaterp
             // 
-            button1.BackColor = Color.WhiteSmoke;
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.DarkGreen;
-            button1.Location = new Point(457, 23);
-            button1.Name = "button1";
-            button1.Size = new Size(205, 38);
-            button1.TabIndex = 2;
-            button1.Text = "generera rapport";
-            button1.UseVisualStyleBackColor = false;
+            generaterp.BackColor = Color.WhiteSmoke;
+            generaterp.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            generaterp.ForeColor = Color.DarkGreen;
+            generaterp.Location = new Point(457, 23);
+            generaterp.Name = "generaterp";
+            generaterp.Size = new Size(205, 38);
+            generaterp.TabIndex = 2;
+            generaterp.Text = "generera rapport";
+            generaterp.UseVisualStyleBackColor = false;
+            generaterp.Click += generaterp_Click;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(totalProfitLossTextBox);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(totalBuyingCostTextBox);
+            groupBox1.Controls.Add(totalSellingCostTextBox);
             groupBox1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.DarkGreen;
             groupBox1.Location = new Point(305, 54);
@@ -135,10 +149,10 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(dateTimePicker2);
-            groupBox2.Controls.Add(button1);
+            groupBox2.Controls.Add(tilldatetimepicker);
+            groupBox2.Controls.Add(generaterp);
             groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(dateTimePicker1);
+            groupBox2.Controls.Add(fromdatetimepicker);
             groupBox2.Location = new Point(319, 56);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(653, 77);
@@ -156,16 +170,16 @@
             label6.TabIndex = 28;
             label6.Text = "Till";
             // 
-            // dateTimePicker2
+            // tilldatetimepicker
             // 
-            dateTimePicker2.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(282, 24);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(153, 38);
-            dateTimePicker2.TabIndex = 26;
-            dateTimePicker2.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
+            tilldatetimepicker.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            tilldatetimepicker.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            tilldatetimepicker.Format = DateTimePickerFormat.Short;
+            tilldatetimepicker.Location = new Point(282, 24);
+            tilldatetimepicker.Name = "tilldatetimepicker";
+            tilldatetimepicker.Size = new Size(153, 38);
+            tilldatetimepicker.TabIndex = 26;
+            tilldatetimepicker.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
             // label5
             // 
@@ -178,16 +192,16 @@
             label5.TabIndex = 27;
             label5.Text = "Från";
             // 
-            // dateTimePicker1
+            // fromdatetimepicker
             // 
-            dateTimePicker1.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(69, 23);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(153, 38);
-            dateTimePicker1.TabIndex = 25;
-            dateTimePicker1.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
+            fromdatetimepicker.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            fromdatetimepicker.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            fromdatetimepicker.Format = DateTimePickerFormat.Short;
+            fromdatetimepicker.Location = new Point(69, 23);
+            fromdatetimepicker.Name = "fromdatetimepicker";
+            fromdatetimepicker.Size = new Size(153, 38);
+            fromdatetimepicker.TabIndex = 25;
+            fromdatetimepicker.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
             // label4
             // 
@@ -200,15 +214,15 @@
             label4.TabIndex = 28;
             label4.Text = "Total vinst/förlust";
             // 
-            // textBox1
+            // totalProfitLossTextBox
             // 
-            textBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.DarkGreen;
-            textBox1.Location = new Point(589, 271);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Total vinst/förlust.\"";
-            textBox1.Size = new Size(383, 38);
-            textBox1.TabIndex = 27;
+            totalProfitLossTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            totalProfitLossTextBox.ForeColor = Color.DarkGreen;
+            totalProfitLossTextBox.Location = new Point(589, 271);
+            totalProfitLossTextBox.Name = "totalProfitLossTextBox";
+            totalProfitLossTextBox.PlaceholderText = "Total vinst/förlust.\"";
+            totalProfitLossTextBox.Size = new Size(383, 38);
+            totalProfitLossTextBox.TabIndex = 27;
             // 
             // label3
             // 
@@ -232,36 +246,36 @@
             label2.TabIndex = 25;
             label2.Text = "Total försäljning";
             // 
-            // textBox4
+            // totalBuyingCostTextBox
             // 
-            textBox4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.ForeColor = Color.DarkGreen;
-            textBox4.Location = new Point(589, 215);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Totala inköpskostnader";
-            textBox4.Size = new Size(383, 38);
-            textBox4.TabIndex = 24;
+            totalBuyingCostTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            totalBuyingCostTextBox.ForeColor = Color.DarkGreen;
+            totalBuyingCostTextBox.Location = new Point(589, 215);
+            totalBuyingCostTextBox.Name = "totalBuyingCostTextBox";
+            totalBuyingCostTextBox.PlaceholderText = "Totala inköpskostnader";
+            totalBuyingCostTextBox.Size = new Size(383, 38);
+            totalBuyingCostTextBox.TabIndex = 24;
             // 
-            // textBox3
+            // totalSellingCostTextBox
             // 
-            textBox3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.ForeColor = Color.DarkGreen;
-            textBox3.Location = new Point(589, 158);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Total försäljning";
-            textBox3.Size = new Size(383, 38);
-            textBox3.TabIndex = 23;
+            totalSellingCostTextBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            totalSellingCostTextBox.ForeColor = Color.DarkGreen;
+            totalSellingCostTextBox.Location = new Point(589, 158);
+            totalSellingCostTextBox.Name = "totalSellingCostTextBox";
+            totalSellingCostTextBox.PlaceholderText = "Total försäljning";
+            totalSellingCostTextBox.Size = new Size(383, 38);
+            totalSellingCostTextBox.TabIndex = 23;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(comboBox1);
+            groupBox3.Controls.Add(locationComboBox);
             groupBox3.Controls.Add(groupBox4);
             groupBox3.Controls.Add(label9);
-            groupBox3.Controls.Add(textBox2);
+            groupBox3.Controls.Add(totalProfitLossBox);
             groupBox3.Controls.Add(label10);
             groupBox3.Controls.Add(label11);
-            groupBox3.Controls.Add(textBox5);
-            groupBox3.Controls.Add(textBox6);
+            groupBox3.Controls.Add(totalBuyingCostBox);
+            groupBox3.Controls.Add(totalSellingCostBox);
             groupBox3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox3.ForeColor = Color.DarkGreen;
             groupBox3.Location = new Point(305, 480);
@@ -271,23 +285,23 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Rapport";
             // 
-            // comboBox1
+            // locationComboBox
             // 
-            comboBox1.ForeColor = Color.DarkGreen;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(319, 58);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(653, 49);
-            comboBox1.TabIndex = 29;
-            comboBox1.Text = "Enskilda FörsäljningFirma";
+            locationComboBox.ForeColor = Color.DarkGreen;
+            locationComboBox.FormattingEnabled = true;
+            locationComboBox.Location = new Point(319, 58);
+            locationComboBox.Name = "locationComboBox";
+            locationComboBox.Size = new Size(653, 49);
+            locationComboBox.TabIndex = 29;
+            locationComboBox.Text = "Enskilda FörsäljningFirma";
             // 
             // groupBox4
             // 
             groupBox4.Controls.Add(label7);
-            groupBox4.Controls.Add(dateTimePicker3);
-            groupBox4.Controls.Add(button2);
+            groupBox4.Controls.Add(tillDateTimePicker2);
+            groupBox4.Controls.Add(generateRPbtn);
             groupBox4.Controls.Add(label8);
-            groupBox4.Controls.Add(dateTimePicker4);
+            groupBox4.Controls.Add(fromDateTimePicker2);
             groupBox4.Location = new Point(319, 94);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(653, 77);
@@ -305,28 +319,29 @@
             label7.TabIndex = 28;
             label7.Text = "Till";
             // 
-            // dateTimePicker3
+            // tillDateTimePicker2
             // 
-            dateTimePicker3.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(282, 26);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(153, 38);
-            dateTimePicker3.TabIndex = 26;
-            dateTimePicker3.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
+            tillDateTimePicker2.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            tillDateTimePicker2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            tillDateTimePicker2.Format = DateTimePickerFormat.Short;
+            tillDateTimePicker2.Location = new Point(282, 26);
+            tillDateTimePicker2.Name = "tillDateTimePicker2";
+            tillDateTimePicker2.Size = new Size(153, 38);
+            tillDateTimePicker2.TabIndex = 26;
+            tillDateTimePicker2.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
-            // button2
+            // generateRPbtn
             // 
-            button2.BackColor = Color.WhiteSmoke;
-            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.DarkGreen;
-            button2.Location = new Point(457, 23);
-            button2.Name = "button2";
-            button2.Size = new Size(205, 38);
-            button2.TabIndex = 2;
-            button2.Text = "generera rapport";
-            button2.UseVisualStyleBackColor = false;
+            generateRPbtn.BackColor = Color.WhiteSmoke;
+            generateRPbtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            generateRPbtn.ForeColor = Color.DarkGreen;
+            generateRPbtn.Location = new Point(457, 23);
+            generateRPbtn.Name = "generateRPbtn";
+            generateRPbtn.Size = new Size(205, 38);
+            generateRPbtn.TabIndex = 2;
+            generateRPbtn.Text = "generera rapport";
+            generateRPbtn.UseVisualStyleBackColor = false;
+            generateRPbtn.Click += generateRPbtn_Click;
             // 
             // label8
             // 
@@ -339,18 +354,18 @@
             label8.TabIndex = 27;
             label8.Text = "Från";
             // 
-            // dateTimePicker4
+            // fromDateTimePicker2
             // 
-            dateTimePicker4.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker4.CalendarForeColor = Color.DarkGreen;
-            dateTimePicker4.CalendarTitleForeColor = Color.DarkGreen;
-            dateTimePicker4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker4.Format = DateTimePickerFormat.Short;
-            dateTimePicker4.Location = new Point(73, 27);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(153, 38);
-            dateTimePicker4.TabIndex = 25;
-            dateTimePicker4.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
+            fromDateTimePicker2.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            fromDateTimePicker2.CalendarForeColor = Color.DarkGreen;
+            fromDateTimePicker2.CalendarTitleForeColor = Color.DarkGreen;
+            fromDateTimePicker2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            fromDateTimePicker2.Format = DateTimePickerFormat.Short;
+            fromDateTimePicker2.Location = new Point(73, 27);
+            fromDateTimePicker2.Name = "fromDateTimePicker2";
+            fromDateTimePicker2.Size = new Size(153, 38);
+            fromDateTimePicker2.TabIndex = 25;
+            fromDateTimePicker2.Value = new DateTime(2023, 10, 17, 14, 34, 1, 0);
             // 
             // label9
             // 
@@ -363,15 +378,15 @@
             label9.TabIndex = 28;
             label9.Text = "Total vinst/förlust";
             // 
-            // textBox2
+            // totalProfitLossBox
             // 
-            textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.DarkGreen;
-            textBox2.Location = new Point(589, 304);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Total vinst/förlust.\"";
-            textBox2.Size = new Size(383, 38);
-            textBox2.TabIndex = 27;
+            totalProfitLossBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            totalProfitLossBox.ForeColor = Color.DarkGreen;
+            totalProfitLossBox.Location = new Point(589, 304);
+            totalProfitLossBox.Name = "totalProfitLossBox";
+            totalProfitLossBox.PlaceholderText = "Total vinst/förlust.\"";
+            totalProfitLossBox.Size = new Size(383, 38);
+            totalProfitLossBox.TabIndex = 27;
             // 
             // label10
             // 
@@ -395,38 +410,25 @@
             label11.TabIndex = 25;
             label11.Text = "Total försäljning";
             // 
-            // textBox5
+            // totalBuyingCostBox
             // 
-            textBox5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox5.ForeColor = Color.DarkGreen;
-            textBox5.Location = new Point(589, 248);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Totala inköpskostnader";
-            textBox5.Size = new Size(383, 38);
-            textBox5.TabIndex = 24;
+            totalBuyingCostBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            totalBuyingCostBox.ForeColor = Color.DarkGreen;
+            totalBuyingCostBox.Location = new Point(589, 248);
+            totalBuyingCostBox.Name = "totalBuyingCostBox";
+            totalBuyingCostBox.PlaceholderText = "Totala inköpskostnader";
+            totalBuyingCostBox.Size = new Size(383, 38);
+            totalBuyingCostBox.TabIndex = 24;
             // 
-            // textBox6
+            // totalSellingCostBox
             // 
-            textBox6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox6.ForeColor = Color.DarkGreen;
-            textBox6.Location = new Point(589, 191);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Total försäljning";
-            textBox6.Size = new Size(383, 38);
-            textBox6.TabIndex = 23;
-            // 
-            // quitBtn
-            // 
-            quitBtn.BackColor = Color.WhiteSmoke;
-            quitBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            quitBtn.ForeColor = Color.DarkGreen;
-            quitBtn.Location = new Point(9, 538);
-            quitBtn.Name = "quitBtn";
-            quitBtn.Size = new Size(239, 47);
-            quitBtn.TabIndex = 2;
-            quitBtn.Text = "Stäng";
-            quitBtn.UseVisualStyleBackColor = false;
-            quitBtn.Click += quitBtn_Click;
+            totalSellingCostBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            totalSellingCostBox.ForeColor = Color.DarkGreen;
+            totalSellingCostBox.Location = new Point(589, 191);
+            totalSellingCostBox.Name = "totalSellingCostBox";
+            totalSellingCostBox.PlaceholderText = "Total försäljning";
+            totalSellingCostBox.Size = new Size(383, 38);
+            totalSellingCostBox.TabIndex = 23;
             // 
             // Form4
             // 
@@ -456,33 +458,33 @@
         private Panel panel1;
         private Button hemBtn;
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button generaterp;
         private GroupBox groupBox1;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox totalProfitLossTextBox;
         private Label label3;
         private Label label2;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private TextBox totalBuyingCostTextBox;
+        private TextBox totalSellingCostTextBox;
+        private DateTimePicker fromdatetimepicker;
+        private DateTimePicker tilldatetimepicker;
         private Label label5;
         private Label label6;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
         private Label label7;
-        private DateTimePicker dateTimePicker3;
-        private Button button2;
+        private DateTimePicker tillDateTimePicker2;
+        private Button generateRPbtn;
         private Label label8;
-        private DateTimePicker dateTimePicker4;
+        private DateTimePicker fromDateTimePicker2;
         private Label label9;
-        private TextBox textBox2;
+        private TextBox totalProfitLossBox;
         private Label label10;
         private Label label11;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private ComboBox comboBox1;
+        private TextBox totalBuyingCostBox;
+        private TextBox totalSellingCostBox;
+        private ComboBox locationComboBox;
         private Button quitBtn;
     }
 }
