@@ -48,14 +48,20 @@ namespace ArtCrafter.MasterofCollections
                 sellLocation.Text = selectedCollectionItem.SaleLocation;
                 sellPrice.Text = selectedCollectionItem.SalePrice?.ToString() ?? string.Empty;
                 // Calculate profit or loss
-                decimal profitOrLoss = (selectedCollectionItem.SalePrice ?? 0) - (selectedCollectionItem.PurchasePrice ?? 0);
+                decimal profitOrLoss = 0;
 
-                // Compare profitOrLoss with zero to determine profit or loss
+                if (selectedCollectionItem.SalePrice.HasValue)
+                {
+                    profitOrLoss = selectedCollectionItem.SalePrice.Value - (selectedCollectionItem.PurchasePrice ?? 0);
+                }
+
                 if (profitOrLoss < 0)
                 {
-                    totalProfitLossTxtBx.ForeColor = Color.Red; // Set text color to red for loss
+                    totalProfitLossTxtBx.ForeColor = Color.Red;
                 }
+
                 totalProfitLossTxtBx.Text = profitOrLoss.ToString();
+
 
                 // Load front and back images from file paths
                 if (!string.IsNullOrEmpty(selectedCollectionItem.FrontImageFilePath))

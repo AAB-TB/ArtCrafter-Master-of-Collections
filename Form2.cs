@@ -414,11 +414,36 @@ namespace ArtCrafter.MasterofCollections
                                 command.Parameters.AddWithValue("@SaleDate", saleDateCheckBox.Checked ? (object)saleDateDateTimePicker.Value : DBNull.Value);
                                 command.Parameters.AddWithValue("@SalePrice", string.IsNullOrEmpty(salePriceTextBox.Text) ? (object)DBNull.Value : decimal.Parse(salePriceTextBox.Text));
                                 command.Parameters.AddWithValue("@SaleLocation", string.IsNullOrEmpty(saleLocationTextBox.Text) ? (object)DBNull.Value : saleLocationTextBox.Text);
-                                command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath); // Updated image path.
-                                command.Parameters.AddWithValue("@BackImageFilePath", backImagePath); // Updated image path.
+                                //command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath); // Updated image path.
+                                //command.Parameters.AddWithValue("@BackImageFilePath", backImagePath); // Updated image path.
                                 command.Parameters.AddWithValue("@Description", descriptionTextBox.Text);
                                 command.Parameters.AddWithValue("@CategoryID", categoryComboBox.SelectedValue);
+                                if (frontImagePath != null)
+                                {
+                                    command.Parameters.AddWithValue("@FrontImageFilePath", frontImagePath);
+                                }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("@FrontImageFilePath", DBNull.Value);
+                                }
 
+                                if (backImagePath != null)
+                                {
+                                    command.Parameters.AddWithValue("@BackImageFilePath", backImagePath);
+                                }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("@BackImageFilePath", DBNull.Value);
+                                }
+
+                                if (signature != null)
+                                {
+                                    command.Parameters.AddWithValue("@SignatureImageFilePath", signature);
+                                }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("@SignatureImageFilePath", DBNull.Value);
+                                }
                                 await command.ExecuteNonQueryAsync();
                             }
                             MessageBox.Show("Item updated successfully!");
